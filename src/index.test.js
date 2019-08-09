@@ -4,6 +4,6 @@ import Test from './js/components/Test';
 
 describe('First React component test with Enzyme', () => {
    it('renders without crashing', () => {
-      expect(shallow(<Test />).dive()).toMatchSnapshot();
+      expect(shallow(<Test />)).toMatchSnapshot();
     });
 });
