@@ -12,7 +12,7 @@ const mapDispatch = dispatch => ({
 });
 class LayoutContainer extends Component {
 	componentDidMount() {
-		const { getMovieList, getMovieTrailor, getMovieDetails } = this.props;
+		const { getMovieList } = this.props;
 		Object.keys(movieCategeries).forEach((id) => {
 			getMovieList(movieCategeries[id]);
 		});
@@ -26,7 +26,7 @@ class LayoutContainer extends Component {
 }
 LayoutContainer.propTypes = {
 	getMovieList: Proptypes.func.isRequired,
-	getMovieTrailor: Proptypes.func.isRequired,
-	getMovieDetails: Proptypes.func.isRequired,
+	// getMovieTrailor: Proptypes.func.isRequired,
+	// getMovieDetails: Proptypes.func.isRequired,
 };
 export default connect(null, mapDispatch)(LayoutContainer);
