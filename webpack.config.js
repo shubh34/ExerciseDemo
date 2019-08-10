@@ -20,4 +20,5 @@ module.exports = {
 			template: './index.ejs',
 		}),
 	],
+	devtool: 'inline-source-map',
 };

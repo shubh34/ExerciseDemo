@@ -18,10 +18,12 @@
 		"react/jsx-indent-props": [2, "tab"],
         "no-shadow":0,
         "import/no-extraneous-dependencies": 0,
+        "import/prefer-default-export":0,
         "indent": [2, "tab"],
         "no-trailing-spaces": "error",
         "eol-last": ["error", "always"],
         "no-tabs": 0,
-        "jsx-quotes": 0
+        "jsx-quotes": 0,
+        "max-len": [2, {"code": 200, "tabWidth": 6, "ignoreUrls": true}]
     }
 }
