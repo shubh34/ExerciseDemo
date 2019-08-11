@@ -5,5 +5,12 @@ import reducers from './reducers';
 
 export default (initialState = []) => {
 	const composedEnhancers = composeWithDevTools();
-	return createStore(reducers, initialState, compose(applyMiddleware(apiMiddleware), composedEnhancers));
+	return createStore(
+		reducers,
+		initialState,
+		compose(
+			applyMiddleware(apiMiddleware),
+			composedEnhancers
+		)
+	);
 };
