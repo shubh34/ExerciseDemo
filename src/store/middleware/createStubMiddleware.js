@@ -42,4 +42,3 @@ export const stubMiddleware = () => () => next => (action) => {
 
 	return next(nextAction);
 };
-
