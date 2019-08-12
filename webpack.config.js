@@ -21,4 +21,7 @@ module.exports = {
 		}),
 	],
 	devtool: 'inline-source-map',
+	devServer: {
+		host: 'localhost.rakuten.tv',
+	},
 };

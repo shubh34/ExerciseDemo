@@ -6,7 +6,9 @@ export default {
 		uri: 'lists/{categoryName}',
 		method: 'GET',
 		resolve(categoryName) {
-			return `${appendApiBaseUrl(this.uri.replace('{categoryName}', categoryName))}?classification_id=5&device_identifier=web&locale=es&market_code=es`;
+			return `${appendApiBaseUrl(
+				this.uri.replace('{categoryName}', categoryName)
+			)}?classification_id=5&device_identifier=web&locale=es&market_code=es`;
 		},
 	},
 	getMovieDetails: {

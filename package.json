@@ -7,7 +7,7 @@
     "test": "jest",
     "start": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production",
-    "format": "prettier --config ./.prettierrc --write ./src/**/*.js",
+    "format": "prettier --config ./.prettierrc --write ./src/**/*.js .dev/*.js dev/**/*.js",
     "lint": "esw ./src --color"
   },
   "repository": {
