@@ -9,7 +9,7 @@ import reducers from './reducers';
 // 		return stubMiddleware();
 // 	}
 // };
-export default (initialState = []) => {
+export default (initialState = {}) => {
 	const composedEnhancers = composeWithDevTools();
 	return createStore(
 		reducers,

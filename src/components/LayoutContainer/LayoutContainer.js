@@ -17,7 +17,7 @@ class LayoutContainer extends Component {
 			getMovieList(movieCategeries[id]);
 		});
 		// getMovieTrailor();
-		// getMovieDetails();
+		getMovieDetails('rain-man');
 	}
 
 	render() {
