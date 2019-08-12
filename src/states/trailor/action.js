@@ -6,7 +6,7 @@ export const GET_MOVIE_TRAILOR_SUCCESS = 'GET_MOVIE_TRAILOR_SUCCESS';
 export const GET_MOVIE_TRAILOR_FAILURE = 'GET_MOVIE_TRAILOR_FAILURE';
 
 
-export const getMovieTrailor = () => {
+export const getMovieTrailor = (id) => {
 	const endPoint = endPoints.getMovieTrailer;
 	const url = endPoint.resolve();
 	return {
@@ -21,7 +21,7 @@ export const getMovieTrailor = () => {
 			body: JSON.stringify({
 				audio_language: 'SPA',
 				audio_quality: '2.0',
-				content_id: 'matrix',
+				content_id: id,
 				content_type: 'movies',
 				device_serial: 'device_serial_1',
 				device_stream_video_quality: 'FHD',

@@ -1,22 +1,24 @@
 import React, { Component } from 'react';
 import Proptypes from 'prop-types';
 import { connect } from 'react-redux';
-import { getMovieListByCategory, getMovieTrailor, getMovieDetails } from '../../states/movieListing/action';
+import { getMovieListByCategory } from '../../states/movieListing/action';
 import { movieCategeries } from '../../configs/config';
+import { getMovieTrailor } from '../../states/trailor/action';
+import { getMovieDetails } from '../../states/movieDetails/action';
 
 const mapDispatch = dispatch => ({
 	getMovieList: categoryName => dispatch(getMovieListByCategory(categoryName)),
-	getMovieTrailor: () => dispatch(getMovieTrailor()),
-	getMovieDetails: () => dispatch(getMovieDetails()),
+	getMovieTrailor: id => dispatch(getMovieTrailor(id)),
+	getMovieDetails: id => dispatch(getMovieDetails(id)),
 
 });
 class LayoutContainer extends Component {
 	componentDidMount() {
-		const { getMovieList } = this.props;
+		const { getMovieList, getMovieDetails, getMovieTrailor } = this.props;
 		Object.keys(movieCategeries).forEach((id) => {
 			getMovieList(movieCategeries[id]);
 		});
-		// getMovieTrailor();
+		getMovieTrailor('rain-man');
 		getMovieDetails('rain-man');
 	}
 
@@ -26,7 +28,7 @@ class LayoutContainer extends Component {
 }
 LayoutContainer.propTypes = {
 	getMovieList: Proptypes.func.isRequired,
-	// getMovieTrailor: Proptypes.func.isRequired,
-	// getMovieDetails: Proptypes.func.isRequired,
+	getMovieTrailor: Proptypes.func.isRequired,
+	getMovieDetails: Proptypes.func.isRequired,
 };
 export default connect(null, mapDispatch)(LayoutContainer);
