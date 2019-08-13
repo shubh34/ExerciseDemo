@@ -5,7 +5,7 @@ import configureStore from '../../store';
 import LayoutContainer from '../LayoutContainer/LayoutContainer';
 
 
-const store = configureStore(['test']);
+const store = configureStore();
 
 const App = () => (
 	<Provider store={store}>

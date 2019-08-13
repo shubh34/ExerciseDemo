@@ -1,28 +1,25 @@
-const apiBaseUrl = 'https://gizmo.rakuten.tv/v3/';
 
-export const appendApiBaseUrl = url => apiBaseUrl + url;
+
 export default {
 	getMovieListByCategory: {
-		uri: 'lists/{categoryName}',
+		url: 'lists/{categoryName}',
 		method: 'GET',
 		resolve(categoryName) {
-			return `${appendApiBaseUrl(
-				this.uri.replace('{categoryName}', categoryName)
-			)}?classification_id=5&device_identifier=web&locale=es&market_code=es`;
+			return this.url.replace('{categoryName}', categoryName);
 		},
 	},
 	getMovieDetails: {
-		uri: 'movies/{movieName}',
+		url: 'movies/{movieName}',
 		method: 'GET',
 		resolve(movieName) {
-			return appendApiBaseUrl(this.uri.replace('{movieName}', movieName));
+			return this.url.replace('{movieName}', movieName);
 		},
 	},
 	getMovieTrailer: {
-		uri: '/me/streamings',
+		url: '/me/streamings',
 		method: 'POST',
 		resolve() {
-			return appendApiBaseUrl(this.url);
+			return this.url;
 		},
 	},
 };
