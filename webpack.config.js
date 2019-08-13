@@ -24,4 +24,7 @@ module.exports = {
 	devServer: {
 		host: 'localhost.rakuten.tv',
 	},
+	output: {
+		filename: '[name].[contenthash].js',
+	},
 };
