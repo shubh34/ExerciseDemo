@@ -6,7 +6,7 @@ const reducer = (state = {}, action) => {
 	case GET_MOVIE_TRAILOR_SUCCESS:
 		return {
 			...state,
-			details: action.payload,
+			trailor: action.payload,
 		};
 	default:
 		return state;

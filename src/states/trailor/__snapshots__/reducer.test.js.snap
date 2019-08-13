@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Reducer movie trailor should update store on GET_MOVIE_TRAILOR_SUCCESS 1`] = `
+Object {
+  "trailor": Object {
+    "videoUrl": "abc",
+  },
+}
+`;
+
+exports[`Reducer movie trailor should update store on GET_MOVIE_TRAILOR_SUCCESS 2`] = `
+Object {
+  "trailor": Object {
+    "videoUrl": "a/b",
+  },
+}
+`;

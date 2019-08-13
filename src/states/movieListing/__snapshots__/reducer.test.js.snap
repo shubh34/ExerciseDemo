@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Reducer movie listing should update store on GET_MOVIE_LIST_BY_CATEGORY_FAILURE 1`] = `
+Object {
+  "123": Object {
+    "movie": 1,
+    "movie2": 2,
+  },
+  "1234": Object {
+    "error": "something went wrong",
+  },
+}
+`;
+
+exports[`Reducer movie listing should update store on GET_MOVIE_LIST_BY_CATEGORY_SUCCESS 1`] = `
+Object {
+  "123": Object {
+    "xyz": "abc",
+  },
+}
+`;
