@@ -17,7 +17,7 @@ export default (initialState = {}) => {
 		initialState,
 		compose(
 			applyMiddleware(endPointMiddleWare(), apiMiddleware),
-			composedEnhancers,
-		),
+			composedEnhancers
+		)
 	);
 };

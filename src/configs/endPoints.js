@@ -1,5 +1,3 @@
-
-
 export default {
 	getMovieListByCategory: {
 		url: 'lists/{categoryName}',
