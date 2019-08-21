@@ -39,7 +39,7 @@ class LayoutContainer extends Component {
 	}
 
 	render() {
-		const { page } = this.props;
+		const { page = 'MovieDetails' } = this.props;
 		switch (page) {
 		case 'Home':
 			return <Home handleBack={this.handleBack} />;
