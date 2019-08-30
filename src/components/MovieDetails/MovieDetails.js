@@ -1,20 +1,24 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { MovieDetailsHero } from './MovieDetailsHero/MovieDetailsHero';
+import { getSnapshotImageUrl } from '../../states/movieDetails/selectors';
 
-import RoundAction from '../sharedComponents/RoundAction/RoundAction';
+const mapStateToProps = state => ({
+	snapShotUrl: getSnapshotImageUrl(state),
+	test: '1',
+});
 
-export const MovieDetailsHero = (props) => {
-	const style = {
-		backgroundImage: "url('https://images-1.wuaki.tv/system/artworks/79/master/matrix-1558427169.jpeg')",
-		height: '600px',
-	};
+const MovieDetails = (props) => {
+	const { snapShotUrl } = props;
 	return (
-		<div style={style}>
-Hello Div
-			{props.children}
+		<div className="movie-details">
+			<MovieDetailsHero heroUrl={snapShotUrl}> Test </MovieDetailsHero>
 		</div>
 	);
 };
 
-const MovieDetails = () => <MovieDetailsHero img="https://images-1.wuaki.tv/system/artworks/79/master/matrix-1558427169.jpeg"><div><RoundAction title="test" /></div></MovieDetailsHero>;
-
-export default MovieDetails;
+MovieDetails.propTypes = {
+	snapShotUrl: PropTypes.string.isRequired,
+};
+export default connect(mapStateToProps)(MovieDetails);

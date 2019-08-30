@@ -6,7 +6,8 @@ const RoundAction = (props) => {
 	const { element, title } = props;
 	return (
 		<div className="round-action">
-			<button type="button" className="round-action_element"/>
+			<button type="button" className="round-action_element" />
+Hie
 			<span className="round-action_title">{title}</span>
 		</div>
 	);
