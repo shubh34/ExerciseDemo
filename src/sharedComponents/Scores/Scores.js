@@ -18,7 +18,7 @@ const Scores = (props) => {
 };
 
 Scores.propTypes = {
-	score: PropTypes.number.isRequired,
+	score: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 	votes: PropTypes.string.isRequired,
 	className: PropTypes.string,
 };

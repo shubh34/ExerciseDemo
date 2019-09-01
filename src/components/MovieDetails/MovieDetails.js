@@ -75,7 +75,7 @@ export const MovieDetails = (props) => {
 };
 
 MovieDetails.propTypes = {
-	score: PropTypes.number.isRequired,
+	score: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 	votes: PropTypes.string.isRequired,
 	snapShotUrl: PropTypes.string.isRequired,
 	movieDescription: PropTypes.string.isRequired,
