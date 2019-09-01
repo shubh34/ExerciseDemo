@@ -48,5 +48,3 @@ exports[`MovieDetails should render details of movie 1`] = `
   </div>
 </div>
 `;
-
-exports[`MovieDetails should render details of movie 2`] = `[MockFunction]`;

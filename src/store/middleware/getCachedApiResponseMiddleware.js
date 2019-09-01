@@ -1,12 +1,10 @@
-/* eslint-disable import/no-mutable-exports */
 import { isRSAA, RSAA } from 'redux-api-middleware';
-import head from 'lodash/head';
 
 export const getCachedApiResponseMiddleware = () => () => next => (action) => {
 	if (!isRSAA(action)) {
 		return next(action);
 	}
-	const cachedApiResponseString = sessionStorage.getItem(head(action[RSAA].endpoint));
+	const cachedApiResponseString = sessionStorage.getItem(action[RSAA].endpoint);
 	if (cachedApiResponseString) {
 		const cachedApiResponse = JSON.parse(cachedApiResponseString);
 		const nextAction = {

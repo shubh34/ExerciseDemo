@@ -1,5 +1,6 @@
 import { RSAA } from 'redux-api-middleware';
-import { endPointMiddleWare, apiBaseUrl } from './createEndPointMiddleware';
+import { endPointMiddleWare, apiBaseUrl, getActionTypesWithCacheKey } from './createEndPointMiddleware';
+import { GET_MOVIE_LIST_BY_CATEGORY_SUCCESS } from '../../states/movieListing/action';
 
 
 const setup = (
@@ -13,7 +14,7 @@ describe('createEndpointMiddleware', () => {
 	it('calls next with original action if not RSAA action', () => {
 		const { middleware, next } = setup();
 		const action = {
-			type: 'DEMO_TEST',
+			types: 'DEMO_TEST',
 		};
 
 		middleware(action);
@@ -26,6 +27,7 @@ describe('createEndpointMiddleware', () => {
 		const action = {
 			[RSAA]: {
 				endpoint: 'test/RSAA',
+				types: [],
 			},
 		};
 
@@ -35,8 +37,17 @@ describe('createEndpointMiddleware', () => {
 			expect.objectContaining({
 				[RSAA]: {
 					endpoint: `${apiBaseUrl}test/RSAA?classification_id=5&device_identifier=web&locale=es&market_code=es`,
+					types: [],
 				},
 			}),
 		);
+	});
+	describe('getActionTypesWithCacheKey', () => {
+		it('should not return typeWithCacheKey when api not to be cached', () => {
+			expect(getActionTypesWithCacheKey([{ type: 'test' }], 'cacheKey')).toMatchSnapshot();
+		});
+		it('should return typeWithCacheKey when api is to be cached', () => {
+			expect(getActionTypesWithCacheKey([{ type: GET_MOVIE_LIST_BY_CATEGORY_SUCCESS }], 'cacheKey')).toMatchSnapshot();
+		});
 	});
 });

@@ -24,14 +24,14 @@ describe('getCachedApiResponseMiddleware', () => {
 	it('should get the response from session storage', () => {
 		const { middleware, next } = setup();
 		const response = {
-			meta: { cacheKey: 'GET_TOURNAMENT_LEADERS_REQUEST' },
+			meta: { cacheKey: 'GET_MOVIE_LIST_BY_CATEGORY_SUCCESS' },
 			payload: { test: 'new Response' },
 		};
 		cacheApiResponse(response);
 		const action = {
 			[RSAA]: {
 				endpoint: 'test/RSAA',
-				types: ['GET_TOURNAMENT_LEADERS_REQUEST'],
+				types: ['GET_MOVIE_LIST_BY_CATEGORY_SUCCESS'],
 			},
 
 		};

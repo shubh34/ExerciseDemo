@@ -8,7 +8,7 @@ exports[`getCachedApiResponseMiddleware should get the response from session sto
         "@@redux-api-middleware/RSAA": Object {
           "endpoint": "test/RSAA",
           "types": Array [
-            "GET_TOURNAMENT_LEADERS_REQUEST",
+            "GET_MOVIE_LIST_BY_CATEGORY_SUCCESS",
           ],
         },
       },
