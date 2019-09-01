@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SlideButton renders without crashing 1`] = `
+<button
+  className="slide-button slide-button--next"
+  onClick={[MockFunction]}
+  type="button"
+>
+  <span
+    className="icon__right-nav"
+  />
+</button>
+`;

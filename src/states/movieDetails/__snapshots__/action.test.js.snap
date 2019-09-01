@@ -13,3 +13,9 @@ Object {
   },
 }
 `;
+
+exports[`movie details action should create action to reset movie details 1`] = `
+Object {
+  "type": "RESET_MOVIE_DETAILS",
+}
+`;

@@ -1,7 +1,7 @@
+/* eslint-disable no-return-assign */
 import React, { Component } from 'react';
-import cx from 'classnames';
+import PropTypes from 'prop-types';
 import './Slider.scss';
-import { tsImportEqualsDeclaration } from '@babel/types';
 import SliderWrapper from './SliderWrapper/SliderWrapper';
 import SlideButton from './SlideButton/SlideButton';
 
@@ -18,38 +18,43 @@ class Slider extends Component {
 	}
 
 	handlePrevious() {
+		const { distance } = this.state;
 		this.setState({
-			distance: this.state.distance + this.refs.test.clientWidth,
+			distance: distance + this.silder.clientWidth,
 		}, (() => {
+			const { distance } = this.state;
 			this.setState({
-				hasNext: this.refs.test.scrollWidth - Math.abs(this.state.distance) > 0,
-				hasPrev: this.state.distance < 0,
+				hasNext: this.silder.scrollWidth - Math.abs(distance) > 0,
+				hasPrev: distance < 0,
 			});
 		}));
 	}
 
 	handleNext() {
+		const { distance } = this.state;
 		this.setState({
-			distance: this.state.distance - this.refs.test.clientWidth,
+			distance: distance - this.silder.clientWidth,
 		}, (() => {
+			const { distance } = this.state;
 			this.setState({
-				hasNext: this.refs.test.scrollWidth - Math.abs(this.state.distance) > this.refs.test.clientWidth,
-				hasPrev: this.state.distance < 0,
+				hasNext: this.silder.scrollWidth - Math.abs(distance) > this.silder.clientWidth,
+				hasPrev: distance < 0,
 			});
 		}));
 	}
 
 	render() {
 		const { distance, hasPrev, hasNext } = this.state;
+		const { children } = this.props;
 		const slideStyle = {
 			transform: `translate3d(${distance}px, 0, 0)`,
 		};
 		return (
 			<SliderWrapper>
 				<div
-					className={cx('slider')}
+					className='slider'
 				>
-					<div ref="test" style={slideStyle} className="slider__container">{this.props.children}</div>
+					<div ref={ref => this.silder = ref} style={slideStyle} className="slider__container">{children}</div>
 				</div>
 				{hasPrev && <SlideButton type="prev" onClick={this.handlePrevious} />}
 				{hasNext && <SlideButton type="next" onClick={this.handleNext} />}
@@ -57,5 +62,9 @@ class Slider extends Component {
 		);
 	}
 }
+
+Slider.propTypes = {
+	children: PropTypes.arrayOf(PropTypes.element).isRequired,
+};
 
 export default Slider;
