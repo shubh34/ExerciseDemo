@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getCachedApiResponseMiddleware should get the response from session storage 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      Object {
+        "@@redux-api-middleware/RSAA": Object {
+          "endpoint": "test/RSAA",
+          "types": Array [
+            "GET_TOURNAMENT_LEADERS_REQUEST",
+          ],
+        },
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+  ],
+}
+`;

@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import configureStore from '../../store';
 import Home from '../Home/Home';
 import MovieDetails from '../MovieDetails/MovieDetails';
-import MovieTrailor from '../MovieTrailor/MovieTrailor';
+import MovieTrailer from '../MovieTrailer/MovieTrailer';
 
 
 const store = configureStore();
@@ -18,7 +18,7 @@ const App = () => (
 				<Switch>
 					<Route exact path='/' component={Home} />
 					<Route exact path='/movies/:id' component={MovieDetails} />
-					<Route exact path='/streams/movie/:id' component={MovieTrailor} />
+					<Route exact path='/streams/movie/:id' component={MovieTrailer} />
 					<Route component={Home} />
 				</Switch>
 			</Router>
