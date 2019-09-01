@@ -7,7 +7,7 @@ import { MovieDetailsHero } from './MovieDetailsHero/MovieDetailsHero';
 import {
 	getSnapshotImageUrl, getMovieTitle, getMovieDescription, getScore, getVotes,
 } from '../../states/movieDetails/selectors';
-import { getMovieDetails } from '../../states/movieDetails/action';
+import { getMovieDetails, resetMovieDetails } from '../../states/movieDetails/action';
 import { getMovieTrailer } from '../../states/trailer/action';
 import PageHeader from '../PageHeader/PageHeader';
 import Scores from '../../sharedComponents/Scores/Scores';
@@ -25,21 +25,22 @@ const mapStateToProps = state => ({
 
 const mapDispatch = dispatch => ({
 	getMovieDetails: id => dispatch(getMovieDetails(id)),
+	resetMovieDetails: () => dispatch(resetMovieDetails()),
 	onShowTrailor: id => dispatch(getMovieTrailer(id)),
+
 });
 
 
 const MovieDetails = (props) => {
 	const {
-		score, votes, snapShotUrl, movieTitle, movieDescription, getMovieDetails, match: { params: { id: movieId = '' } },
+		score, votes, snapShotUrl, movieTitle, movieDescription, getMovieDetails, resetMovieDetails, match: { params: { id: movieId = '' } },
 	} = props;
 
 	useEffect(() => {
 		getMovieDetails(movieId);
-		document.title = `${movieTitle}- Rakuten TV`;
+		return () => resetMovieDetails();
 	}, [movieId]);
 	useEffect(() => {
-		getMovieDetails(movieId);
 		document.title = `${movieTitle}- Rakuten TV`;
 	}, [movieTitle]);
 	const onShowTrailor = () => {
@@ -76,5 +77,6 @@ MovieDetails.propTypes = {
 	movieDescription: PropTypes.string.isRequired,
 	movieTitle: PropTypes.string.isRequired,
 	getMovieDetails: PropTypes.func.isRequired,
+	resetMovieDetails: PropTypes.func.isRequired,
 };
 export default connect(mapStateToProps, mapDispatch)(MovieDetails);

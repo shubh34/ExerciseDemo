@@ -1,5 +1,5 @@
 import reducer from './reducer';
-import { GET_MOVIE_DETAILS_SUCCESS, GET_MOVIE_DETAILS_FAILURE } from './action';
+import { GET_MOVIE_DETAILS_SUCCESS, GET_MOVIE_DETAILS_FAILURE, RESET_MOVIE_DETAILS } from './action';
 
 const state = {
 	details: {
@@ -21,6 +21,15 @@ describe('Reducer movie details', () => {
 		const action = {
 			type: GET_MOVIE_DETAILS_FAILURE,
 			payload: { error: 'something went wrong' },
+		};
+		const updateState = reducer(
+			state, action,
+		);
+		expect(updateState).toMatchSnapshot();
+	});
+	it('should reset store on RESET_MOVIE_DETAILS', () => {
+		const action = {
+			type: RESET_MOVIE_DETAILS,
 		};
 		const updateState = reducer(
 			state, action,
