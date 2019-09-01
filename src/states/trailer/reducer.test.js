@@ -1,5 +1,5 @@
 import reducer from './reducer';
-import { GET_MOVIE_TRAILOR_SUCCESS, GET_MOVIE_TRAILOR_FAILURE } from './action';
+import { GET_MOVIE_TRAILOR_SUCCESS, GET_MOVIE_TRAILOR_REQUEST } from './action';
 
 const state = {
 	trailer: {
@@ -17,10 +17,9 @@ describe('Reducer movie trailer', () => {
 		);
 		expect(updateState).toMatchSnapshot();
 	});
-	it('should update store on GET_MOVIE_TRAILOR_SUCCESS', () => {
+	it('should update storeto default state on GET_MOVIE_TRAILOR_REQUEST', () => {
 		const action = {
-			type: GET_MOVIE_TRAILOR_FAILURE,
-			payload: { error: 'something went wrong' },
+			type: GET_MOVIE_TRAILOR_REQUEST,
 		};
 		const updateState = reducer(
 			state, action,

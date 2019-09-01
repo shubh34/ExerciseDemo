@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieListing Selector should return details 1`] = `"Capitana Marvel te lleva a una espectacular aventura en los años 90, siguiendo el camino de Carol Danvers (Brie Larson) mientras se convierte en una de las heroínas más poderosas del universo. Cuando la guerra galáctica llega a la Tierra, se encuentra con el agente Nick Furia (Samuel L. Jackson) en el centro del caos, que le lleva a su destino final como Vengador."`;
+
+exports[`MovieListing Selector should return getMovieTitle 1`] = `"Capitana Marvel"`;
+
+exports[`MovieListing Selector should return score 1`] = `7`;
+
+exports[`MovieListing Selector should return snapshot url  1`] = `"https://images-3.wuaki.tv/system/shots/144189/original/capitana-marvel-1560352960-width1920-quality80.jpeg"`;
+
+exports[`MovieListing Selector should return votes 1`] = `"6,5K"`;

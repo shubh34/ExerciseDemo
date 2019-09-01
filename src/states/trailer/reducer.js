@@ -1,13 +1,15 @@
-import { GET_MOVIE_TRAILOR_SUCCESS } from './action';
+import { GET_MOVIE_TRAILOR_SUCCESS, GET_MOVIE_TRAILOR_REQUEST } from './action';
 
-
-const reducer = (state = {}, action) => {
+const defaultState = {};
+const reducer = (state = defaultState, action) => {
 	switch (action.type) {
 	case GET_MOVIE_TRAILOR_SUCCESS:
 		return {
 			...state,
-			trailer: action.payload,
+			...action.payload,
 		};
+	case GET_MOVIE_TRAILOR_REQUEST:
+		return defaultState;
 	default:
 		return state;
 	}

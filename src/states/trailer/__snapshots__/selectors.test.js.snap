@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Trailer Selector should return trailer url 1`] = `"https://prod-stpeter-pmd.verizon.cdn.rakuten.tv/7/c/3/7c38f0f5b4e1bb200ebb4fa4f6386669-mc-0-137-0-0_SD_TRAILER_PAR_1_1/7c38f0f5b4e1bb200ebb4fa4f6386669-mc-0-137-0-0_SD_TRAILER_PAR_1_1.mp4?UeKaKfcJXUl4EZ34s90Y3c_LOwBF17L76uXbxJmZcPVuu1cmxTXM1YPrR_-tWcASBG7kfDEarl4c5pqAY4a6NrlUPLlVP_mzvcWZ7XfF9a0u7wu7h-dlRysR_VEe_-Q0F9osaJIWYtAREIqGMWbT-Zdq2jOn3ubbvd-xJvcr6NgidJa5w9lYas-7kUdzgEF-O9x0Rv4KadmKPVpRU7qNykIaso8RiQQon4NS5iuPAkh8xGvTGq6xCFKupMEFPhZk2PNr96ThUNRIJg=="`;
