@@ -1,7 +1,7 @@
 import { GO_TO_PAGE } from './action';
 
 export const initailPage = {
-	name: 'Home',
+	name: 'MovieDetails',
 	backPage: 'Home',
 };
 

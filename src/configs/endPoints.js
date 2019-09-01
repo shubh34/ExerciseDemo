@@ -1,5 +1,5 @@
 export default {
-	getMovieListByCategory: {
+	fetchMovieListByCategory: {
 		url: 'lists/{categoryName}',
 		method: 'GET',
 		resolve(categoryName) {

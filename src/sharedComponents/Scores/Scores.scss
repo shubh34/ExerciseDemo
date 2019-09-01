@@ -1,0 +1,23 @@
+.score {
+    text-align: center;
+    padding: 8px
+}
+
+.icon__rate ::before {
+content: '\e61a';
+}
+
+.icon__profile ::before {
+content: '\e60e';
+}
+.score_rate, .score_counter {
+    padding: 4px;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+.score_rate { 
+    color: #ffe300;
+}
+.movie-details-score {
+    font-size: 20px;
+}

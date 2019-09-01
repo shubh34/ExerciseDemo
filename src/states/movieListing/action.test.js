@@ -1,8 +1,8 @@
-import { getMovieListByCategory } from './action';
+import { fetchMovieListByCategory } from './action';
 
 
 describe('movie list action', () => {
 	it('should create action for getting movie list', () => {
-		expect(getMovieListByCategory('test')).toMatchSnapshot();
+		expect(fetchMovieListByCategory('test')).toMatchSnapshot();
 	});
 });

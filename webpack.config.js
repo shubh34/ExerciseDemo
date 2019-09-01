@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 // auto prefixer and post css
 module.exports = {
@@ -49,11 +50,14 @@ module.exports = {
 			template: './index.ejs',
 		}),
 	],
-	devtool: 'inline-source-map',
 	devServer: {
 		host: 'localhost.rakuten.tv',
+		historyApiFallback: true,
 	},
+	devtool: 'inline-source-map',
 	output: {
+		path: path.resolve(__dirname, 'dist'),
 		filename: '[name].[contenthash].js',
+		publicPath: '/',
 	},
 };

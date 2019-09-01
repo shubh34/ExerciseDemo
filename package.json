@@ -24,11 +24,15 @@
   },
   "homepage": "https://github.com/shubh34/ExerciseDemo#readme",
   "dependencies": {
+    "classnames": "^2.2.6",
+    "lodash": "^4.17.15",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.1.0",
+    "react-router-dom": "^5.0.1",
     "redux": "^4.0.4",
-    "redux-api-middleware": "^3.0.1"
+    "redux-api-middleware": "^3.0.1",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -63,6 +67,9 @@
     "style-loader": "^1.0.0",
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6",
-    "webpack-dev-server": "^3.8.0"
+    "webpack-dev-server": "^3.8.0",
+    "regenerator-runtime": "^0.13.3",
+    "enzyme-to-json": "^3.4.0",
+    "identity-obj-proxy": "^3.0.0"
   }
 }

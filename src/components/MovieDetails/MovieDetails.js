@@ -1,5 +1,80 @@
-import React from 'react';
+import './MovieDetails.scss';
 
-const MovieDetails = () => <div>this is MovieDetails page </div>;
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { MovieDetailsHero } from './MovieDetailsHero/MovieDetailsHero';
+import {
+	getSnapshotImageUrl, getMovieTitle, getMovieDescription, getScore, getVotes,
+} from '../../states/movieDetails/selectors';
+import { getMovieDetails } from '../../states/movieDetails/action';
+import { getMovieTrailor } from '../../states/trailor/action';
+import PageHeader from '../PageHeader/PageHeader';
+import Scores from '../../sharedComponents/Scores/Scores';
+import RoundAction from '../../sharedComponents/RoundAction/RoundAction';
+import SectionHeader from '../../sharedComponents/SectionHeader/SectionHeader';
+import Header from '../../sharedComponents/Header/Header';
 
-export default MovieDetails;
+const mapStateToProps = state => ({
+	snapShotUrl: getSnapshotImageUrl(state),
+	movieTitle: getMovieTitle(state),
+	movieDescription: getMovieDescription(state),
+	score: getScore(state),
+	votes: getVotes(state),
+});
+
+const mapDispatch = dispatch => ({
+	getMovieDetails: id => dispatch(getMovieDetails(id)),
+	onShowTrailor: id => dispatch(getMovieTrailor(id)),
+});
+
+
+const MovieDetails = (props) => {
+	const {
+		score, votes, snapShotUrl, movieTitle, movieDescription, getMovieDetails, match: { params: { id: movieId = '' } },
+	} = props;
+
+	useEffect(() => {
+		getMovieDetails(movieId);
+		document.title = `${movieTitle}- Rakuten TV`;
+	}, [movieId]);
+	useEffect(() => {
+		getMovieDetails(movieId);
+		document.title = `${movieTitle}- Rakuten TV`;
+	}, [movieTitle]);
+	const onShowTrailor = () => {
+		props.history.push(`/streams/movie/${movieId}`);
+	};
+	return (
+		<div>
+			<PageHeader />
+			<div className="movie-details">
+				<MovieDetailsHero heroUrl={snapShotUrl} onClick={onShowTrailor}>
+					<div className="movie-info">
+						<div className="details_actions">
+							<RoundAction onClick={onShowTrailor} />
+						</div>
+						<div className="details_meta">
+							<Scores score={score} votes={votes} className="movie-details-score" />
+							<Header header={movieTitle} className="details_meta_title" />
+						</div>
+					</div>
+				</MovieDetailsHero>
+				<div className="movie-details-description">
+					<SectionHeader header="Descripción :" />
+					<p>{movieDescription}</p>
+				</div>
+			</div>
+		</div>
+	);
+};
+
+MovieDetails.propTypes = {
+	score: PropTypes.string.isRequired,
+	votes: PropTypes.string.isRequired,
+	snapShotUrl: PropTypes.string.isRequired,
+	movieDescription: PropTypes.string.isRequired,
+	movieTitle: PropTypes.string.isRequired,
+	getMovieDetails: PropTypes.func.isRequired,
+};
+export default connect(mapStateToProps, mapDispatch)(MovieDetails);
