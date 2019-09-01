@@ -13,7 +13,7 @@ const RoundAction = (props) => {
 };
 
 RoundAction.propTypes = {
-	title: PropTypes.string.isRequired,
+	title: PropTypes.string,
 	onClick: PropTypes.func.isRequired,
 };
 export default RoundAction;

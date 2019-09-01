@@ -12,11 +12,11 @@ const mapDispatch = dispatch => ({
 	getMovieTrailer: id => dispatch(getMovieTrailer(id)),
 });
 const mapState = state => ({
-	MovieTrailerUrl: getMovieTrailerUrl(state),
+	movieTrailerUrl: getMovieTrailerUrl(state),
 });
-const MovieTrailer = (props) => {
+export const MovieTrailer = (props) => {
 	const {
-		getMovieTrailer, MovieTrailerUrl, history, match: { params: { id: movieId = '' } },
+		getMovieTrailer, movieTrailerUrl, history, match: { params: { id: movieId = '' } },
 	} = props;
 
 	useEffect(() => {
@@ -26,8 +26,8 @@ const MovieTrailer = (props) => {
 	return (
 		<div className="movie-trailer">
 			<BackButton title="Go details" onClick={onVideoBack} />
-			<video width="100%" key={MovieTrailerUrl} height="100%" controls autoPlay onEnded={onVideoBack}>
-				<source src={MovieTrailerUrl} type="video/mp4" />
+			<video width="100%" key={movieTrailerUrl} height="100%" controls autoPlay onEnded={onVideoBack}>
+				<source src={movieTrailerUrl} type="video/mp4" />
 			</video>
 		</div>
 	);
@@ -35,7 +35,15 @@ const MovieTrailer = (props) => {
 
 MovieTrailer.propTypes = {
 	getMovieTrailer: PropTypes.func.isRequired,
-	MovieTrailerUrl: PropTypes.string.isRequired,
+	movieTrailerUrl: PropTypes.string,
+	history: PropTypes.shape({
+		goBack: PropTypes.func.isRequired,
+	}),
+	match: PropTypes.shape({
+		params: PropTypes.shape({
+			id: PropTypes.string,
+		}).isRequired,
+	}),
 };
 
 export default connect(mapState, mapDispatch)(MovieTrailer);

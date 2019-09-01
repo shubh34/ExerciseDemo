@@ -1,5 +1,5 @@
-import React from 'react';
 import './MovieDetailsHero.scss';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 

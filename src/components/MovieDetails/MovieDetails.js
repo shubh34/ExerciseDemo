@@ -31,7 +31,7 @@ const mapDispatch = dispatch => ({
 });
 
 
-const MovieDetails = (props) => {
+export const MovieDetails = (props) => {
 	const {
 		score, votes, snapShotUrl, movieTitle, movieDescription, getMovieDetails, resetMovieDetails, match: { params: { id: movieId = '' } },
 	} = props;
@@ -75,12 +75,20 @@ const MovieDetails = (props) => {
 };
 
 MovieDetails.propTypes = {
-	score: PropTypes.string.isRequired,
+	score: PropTypes.number.isRequired,
 	votes: PropTypes.string.isRequired,
 	snapShotUrl: PropTypes.string.isRequired,
 	movieDescription: PropTypes.string.isRequired,
 	movieTitle: PropTypes.string.isRequired,
 	getMovieDetails: PropTypes.func.isRequired,
 	resetMovieDetails: PropTypes.func.isRequired,
+	history: PropTypes.shape({
+		push: PropTypes.func.isRequired,
+	}),
+	match: PropTypes.shape({
+		params: PropTypes.shape({
+			id: PropTypes.string,
+		}).isRequired,
+	}),
 };
 export default connect(mapStateToProps, mapDispatch)(MovieDetails);
