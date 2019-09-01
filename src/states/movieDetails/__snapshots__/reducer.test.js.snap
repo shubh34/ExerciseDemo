@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Reducer movie details should reset store on RESET_MOVIE_DETAILS 1`] = `Object {}`;
+
 exports[`Reducer movie details should update store on GET_MOVIE_DETAILS_FAILURE 1`] = `
 Object {
   "details": Object {
@@ -11,7 +13,8 @@ Object {
 exports[`Reducer movie details should update store on GET_MOVIE_DETAILS_SUCCESS 1`] = `
 Object {
   "details": Object {
-    "movieName": "matrix",
+    "movieName": "test",
   },
+  "movieName": "matrix",
 }
 `;

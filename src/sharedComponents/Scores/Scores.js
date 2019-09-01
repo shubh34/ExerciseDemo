@@ -18,7 +18,7 @@ const Scores = (props) => {
 };
 
 Scores.propTypes = {
-	score: PropTypes.string.isRequired,
+	score: PropTypes.number.isRequired,
 	votes: PropTypes.string.isRequired,
 	className: PropTypes.string,
 };

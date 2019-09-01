@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './SlideButton.scss';
 
 const SlideButton = ({ onClick, type }) => {
@@ -8,5 +9,9 @@ const SlideButton = ({ onClick, type }) => {
 			<span className={arrowIcon} />
 		</button>
 	);
+};
+SlideButton.propTypes = {
+	onClick: PropTypes.func.isRequired,
+	type: PropTypes.string.isRequired,
 };
 export default SlideButton;

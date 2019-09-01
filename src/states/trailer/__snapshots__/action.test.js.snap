@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`movie trailor action should create action for getting movie trailor 1`] = `
+exports[`movie trailer action should create action for getting movie trailer 1`] = `
 Object {
   "@@redux-api-middleware/RSAA": Object {
     "body": "{\\"audio_language\\":\\"SPA\\",\\"audio_quality\\":\\"2.0\\",\\"content_id\\":\\"test\\",\\"content_type\\":\\"movies\\",\\"device_serial\\":\\"device_serial_1\\",\\"device_stream_video_quality\\":\\"FHD\\",\\"player\\":\\"web:PD-NONE\\",\\"subtitle_language\\":\\"MIS\\",\\"video_type\\":\\"trailer\\"}",

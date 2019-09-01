@@ -10,7 +10,7 @@ const BackButton = ({ onClick, title = 'Back' }) => (
 
 );
 BackButton.propTypes = {
-	onClick: PropTypes.string.isRequired,
+	onClick: PropTypes.func.isRequired,
 	title: PropTypes.string,
 };
 

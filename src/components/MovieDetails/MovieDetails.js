@@ -41,11 +41,15 @@ const MovieDetails = (props) => {
 		return () => resetMovieDetails();
 	}, [movieId]);
 	useEffect(() => {
-		document.title = `${movieTitle}- Rakuten TV`;
+		if (movieTitle) {
+			document.title = `${movieTitle}- Rakuten TV`;
+		}
 	}, [movieTitle]);
+
 	const onShowTrailor = () => {
 		props.history.push(`/streams/movie/${movieId}`);
 	};
+
 	return (
 		<div>
 			<PageHeader />
