@@ -3,11 +3,10 @@ import PropTypes from 'prop-types';
 import './RoundAction.scss';
 
 const RoundAction = (props) => {
-	const { element, title } = props;
+	const { title = 'Trailer', onClick } = props;
 	return (
 		<div className="round-action">
-			<button type="button" className="round-action_element" />
-Hie
+			<button type="button" className="round-action_element" onClick={onClick} />
 			<span className="round-action_title">{title}</span>
 		</div>
 	);
@@ -15,6 +14,6 @@ Hie
 
 RoundAction.propTypes = {
 	title: PropTypes.string.isRequired,
-	element: PropTypes.node.isRequired,
+	onClick: PropTypes.func.isRequired,
 };
 export default RoundAction;

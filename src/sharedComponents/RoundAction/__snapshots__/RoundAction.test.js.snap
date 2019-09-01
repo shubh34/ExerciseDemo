@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RoundAction renders without crashing 1`] = `
+<div
+  className="round-action"
+>
+  <button
+    className="round-action_element"
+    onClick={[MockFunction]}
+    type="button"
+  />
+  <span
+    className="round-action_title"
+  >
+    xyz
+  </span>
+</div>
+`;

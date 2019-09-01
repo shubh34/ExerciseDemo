@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<div>
+  <PageHeader />
+  <div
+    className="movie-listing"
+  >
+    <Connect(Movies)
+      id="populares-en-taquilla"
+      key="1"
+    />
+    <Connect(Movies)
+      id="estrenos-para-toda-la-familia"
+      key="2"
+    />
+    <Connect(Movies)
+      id="estrenos-imprescindibles-en-taquilla"
+      key="3"
+    />
+    <Connect(Movies)
+      id="estrenos-espanoles"
+      key="4"
+    />
+    <Connect(Movies)
+      id="si-te-perdiste"
+      key="5"
+    />
+    <Connect(Movies)
+      id="nuestras-preferidas-de-la-semana"
+      key="6"
+    />
+  </div>
+</div>
+`;

@@ -1,0 +1,33 @@
+.slide-button {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 48px;
+    background: rgba(0, 0, 0, 0.10);
+    border: 0;
+    outline: 0;
+    padding: 0;
+    z-index: 4;
+    cursor: pointer;
+    font-size: 40px;
+  
+    span {
+      color: #fff;
+      display: block;
+      margin: 0 auto;
+      text-shadow: 0 0 3px rgba(0,0,0,.8);
+    }
+  
+    &--next {
+      right: 0;
+  
+      span ::before {
+        content: '\e637'
+      }
+    }
+  
+    &--prev {
+      left: 0;
+    }
+  }
+  

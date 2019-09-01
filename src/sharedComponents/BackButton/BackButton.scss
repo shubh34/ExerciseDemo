@@ -1,0 +1,17 @@
+.back-button {
+    z-index: 110;
+    position: absolute; 
+   & :before {
+       content: '\e628';
+       font-family: Glyphs;
+       font-size: 32px;
+   };
+   button {
+    font-size: 24px;
+    padding: 16px;
+    background: transparent;
+    border: none;
+    color:white;
+    cursor: pointer;
+   }
+}

@@ -1,4 +1,32 @@
 .movie-details {
-    max-width: 1280px;
-    margin: 0 auto;
+    @media screen and (min-width: 1140px) {
+        padding-top: 60px;
+    }
+}
+
+.movie-info {
+    position: relative;
+    height: 100%;
+}
+.details_actions {
+    position: relative;
+    top: 30%;
+   
+}
+.details_meta {
+    position: absolute;
+    bottom: -16px;
+    display: block;
+    width: 100%
+}
+.details_meta_title {
+    text-align: center;
+}
+.movie-details-description {
+    padding: 16px;
+    @media screen and (min-width: 1140px) {
+        padding-top: 24px;
+    }
+    letter-spacing: 0.5px;
+    line-height: 32px;
 }

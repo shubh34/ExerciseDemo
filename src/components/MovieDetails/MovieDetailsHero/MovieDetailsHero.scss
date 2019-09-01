@@ -1,14 +1,16 @@
 .movie-details_hero {
     position: relative;
-    background-size: cover;
-    height: calc(100vh - 50px);
-    min-height: 455px;
+    background-size: 215%;
+    height: 550px;
     background-image: url(https://prod3-kraken-cloudfront.rakuten.tv/images/placeholders/hero-1bbf9a928a.jpg);
     background-color: #000;
     background-repeat: no-repeat;
     background-position: center top;
-    transition: height .1s linear,background-image .2s ease;
-    transform: translateZ(0);
     will-change: background-position;
-    z-index: 1;
+    @media screen and (min-width: 560px) {
+        background-size: cover;
+    }
+    @media screen and (min-width: 1140px) {
+        height: 620px;
+    }
 }
