@@ -6,7 +6,7 @@ export const GET_MOVIE_TRAILOR_SUCCESS = 'GET_MOVIE_TRAILOR_SUCCESS';
 export const GET_MOVIE_TRAILOR_FAILURE = 'GET_MOVIE_TRAILOR_FAILURE';
 
 
-export const getMovieTrailor = (id) => {
+export const getMovieTrailer = (id) => {
 	const endPoint = endPoints.getMovieTrailer;
 	const url = endPoint.resolve();
 	return {

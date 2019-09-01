@@ -8,7 +8,7 @@ import {
 	getSnapshotImageUrl, getMovieTitle, getMovieDescription, getScore, getVotes,
 } from '../../states/movieDetails/selectors';
 import { getMovieDetails } from '../../states/movieDetails/action';
-import { getMovieTrailor } from '../../states/trailor/action';
+import { getMovieTrailer } from '../../states/trailer/action';
 import PageHeader from '../PageHeader/PageHeader';
 import Scores from '../../sharedComponents/Scores/Scores';
 import RoundAction from '../../sharedComponents/RoundAction/RoundAction';
@@ -25,7 +25,7 @@ const mapStateToProps = state => ({
 
 const mapDispatch = dispatch => ({
 	getMovieDetails: id => dispatch(getMovieDetails(id)),
-	onShowTrailor: id => dispatch(getMovieTrailor(id)),
+	onShowTrailor: id => dispatch(getMovieTrailer(id)),
 });
 
 

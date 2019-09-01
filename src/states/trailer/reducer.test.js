@@ -2,11 +2,11 @@ import reducer from './reducer';
 import { GET_MOVIE_TRAILOR_SUCCESS, GET_MOVIE_TRAILOR_FAILURE } from './action';
 
 const state = {
-	trailor: {
+	trailer: {
 		videoUrl: 'a/b',
 	},
 };
-describe('Reducer movie trailor', () => {
+describe('Reducer movie trailer', () => {
 	it('should update store on GET_MOVIE_TRAILOR_SUCCESS', () => {
 		const action = {
 			type: GET_MOVIE_TRAILOR_SUCCESS,
