@@ -1,3 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`movie list action should create action for getting movie list 1`] = `[Function]`;
+exports[`movie list action should create action for getting movie list 1`] = `
+Object {
+  "@@redux-api-middleware/RSAA": Object {
+    "endpoint": "lists/test",
+    "method": "GET",
+    "types": Array [
+      "GET_MOVIE_LIST_BY_CATEGORY_REQUEST",
+      Object {
+        "meta": Object {
+          "id": "test",
+        },
+        "type": "GET_MOVIE_LIST_BY_CATEGORY_SUCCESS",
+      },
+      Object {
+        "meta": Object {
+          "id": "test",
+        },
+        "type": "GET_MOVIE_LIST_BY_CATEGORY_FAILURE",
+      },
+    ],
+  },
+}
+`;
