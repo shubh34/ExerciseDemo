@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`movie details action should create action for getting movie details 1`] = `
+Object {
+  "@@redux-api-middleware/RSAA": Object {
+    "endpoint": "movies/test",
+    "method": "GET",
+    "types": Array [
+      "GET_MOVIE_DETAILS_REQUEST",
+      "GET_MOVIE_DETAILS_SUCCESS",
+      "GET_MOVIE_DETAILS_FAILURE",
+    ],
+  },
+}
+`;
+
+exports[`movie details action should create action to reset movie details 1`] = `
+Object {
+  "type": "RESET_MOVIE_DETAILS",
+}
+`;

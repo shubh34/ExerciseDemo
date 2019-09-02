@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SliderWrapper should render childeren in wrapper 1`] = `
+<div
+  className="slider-wrapper"
+>
+  <div>
+    Wrapper
+  </div>
+</div>
+`;

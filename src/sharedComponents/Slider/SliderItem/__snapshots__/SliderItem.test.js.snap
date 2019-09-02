@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SliderItem should render SliderItem 1`] = `
+<div
+  className="slider-item"
+>
+  <Link
+    className="slider-item-image"
+    to="/movies/1"
+  >
+    <img
+      alt=""
+      src="https://images-2.wuaki.tv/system/artworks/86665/master/capitana-marvel-1560352921.jpeg"
+      width="100%"
+    />
+  </Link>
+  <Scores
+    score={22}
+    votes="6.6k"
+  />
+</div>
+`;

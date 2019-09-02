@@ -1,0 +1,37 @@
+.round-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.round-action_element {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0 1px 1px rgba(0,0,0,.5);
+    background-color: rgba(0,0,0,.7);
+    border: none;
+    cursor: pointer;
+    &:before {
+        content: '\e614';
+        color: #fff;
+        font-family: Glyphs;
+        font-size: 40px;
+        transition: color .2s ease;
+       
+    }
+    &:hover {
+        &:before {
+            color: #ffe300;
+        }
+    }
+    @media screen and (min-width: 1140px) {
+        width: 110px;
+        height: 110px;
+        &:before {
+            font-size: 56px;
+        }
+    }
+}
+.round-action_title {
+    padding: 8px;
+}

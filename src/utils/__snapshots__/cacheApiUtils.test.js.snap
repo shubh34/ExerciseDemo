@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`cacheApiUtils should cache the Api response 1`] = `
+Storage {
+  "GET_TOURNAMENT_LEADERS_REQUEST": "{\\"response\\":{\\"test\\":\\"test\\"}}",
+  "NOT_LISTED_API_RESPONSE": "{\\"response\\":{\\"test\\":\\"new Response\\"}}",
+}
+`;
+
+exports[`cacheApiUtils should not cache the Api response when already cached 1`] = `
+Storage {
+  "GET_TOURNAMENT_LEADERS_REQUEST": "{\\"response\\":{\\"test\\":\\"test\\"}}",
+  "NOT_LISTED_API_RESPONSE": "{\\"response\\":{\\"test\\":\\"new Response\\"}}",
+}
+`;
+
+exports[`cacheApiUtils should not cache the Api response when its not in toBeCachedApiResponse list 1`] = `
+Storage {
+  "NOT_LISTED_API_RESPONSE": "{\\"response\\":{\\"test\\":\\"new Response\\"}}",
+}
+`;

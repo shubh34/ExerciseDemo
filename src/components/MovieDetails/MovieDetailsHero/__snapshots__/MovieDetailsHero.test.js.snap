@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieDetailsHero should render children in wrapper 1`] = `
+<div
+  className="movie-details_hero"
+  style={
+    Object {
+      "backgroundImage": "url(test.jpg)",
+    }
+  }
+>
+  <div>
+    Wrapper
+  </div>
+</div>
+`;

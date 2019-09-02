@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieDetails should render details of movie 1`] = `
+<div>
+  <PageHeader />
+  <div
+    className="movie-details"
+  >
+    <MovieDetailsHero
+      heroUrl="https://images-3.wuaki.tv/system/shots/144189/original/capitana-marvel-1560352960-width1920-quality80.jpeg"
+      onClick={[Function]}
+    >
+      <div
+        className="movie-info"
+      >
+        <div
+          className="details_actions"
+        >
+          <RoundAction
+            onClick={[Function]}
+          />
+        </div>
+        <div
+          className="details_meta"
+        >
+          <Scores
+            className="movie-details-score"
+            score={7}
+            votes="6,5K"
+          />
+          <Header
+            className="details_meta_title"
+            header="Capitana Marvel"
+          />
+        </div>
+      </div>
+    </MovieDetailsHero>
+    <div
+      className="movie-details-description"
+    >
+      <SectionHeader
+        header="Descripción :"
+      />
+      <p>
+        Capitana Marvel te lleva a una espectacular aventura en los años 90, siguiendo el camino de Carol Danvers (Brie Larson) mientras se convierte en una de las heroínas más poderosas del universo. Cuando la guerra galáctica llega a la Tierra, se encuentra con el agente Nick Furia (Samuel L. Jackson) en el centro del caos, que le lleva a su destino final como Vengador.
+      </p>
+    </div>
+  </div>
+</div>
+`;

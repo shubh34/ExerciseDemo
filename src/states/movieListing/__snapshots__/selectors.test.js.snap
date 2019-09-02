@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieListing Selector should return Movie list  1`] = `
+Array [
+  Object {
+    "artwork": "https://images-2.wuaki.tv/system/artworks/86665/master/capitana-marvel-1560352921-width217-quality80.jpeg",
+    "id": "capitana-marvel",
+    "score": 7,
+    "votes": "6,5K",
+  },
+  Object {
+    "artwork": "https://images-3.wuaki.tv/system/artworks/54649/master/a-47-metros-1558460397-width217-quality80.jpeg",
+    "id": "a-47-metros",
+    "score": 5.6,
+    "votes": "1,6K",
+  },
+  Object {
+    "artwork": "https://images-2.wuaki.tv/system/artworks/86659/master/green-book-1558483188-width217-quality80.jpeg",
+    "id": "green-book",
+    "score": 8.3,
+    "votes": "4K",
+  },
+  Object {
+    "artwork": "https://images-2.wuaki.tv/system/artworks/43779/master/mascotas-1558452275-width217-quality80.jpeg",
+    "id": "mascotas",
+    "score": 6.1,
+    "votes": "5,6K",
+  },
+  Object {
+    "artwork": "https://images-2.wuaki.tv/system/artworks/89878/master/mula-1558485497-width217-quality80.jpeg",
+    "id": "mula",
+    "score": 6.5,
+    "votes": "1,8K",
+  },
+  Object {
+    "artwork": "https://images-0.wuaki.tv/system/artworks/89879/master/escape-room-2019-1559899512-width217-quality80.jpeg",
+    "id": "escape-room-2019",
+    "score": 6.4,
+    "votes": "1,5K",
+  },
+  Object {
+    "artwork": "https://images-1.wuaki.tv/system/artworks/86635/master/perdiendo-el-este-1559228752-width217-quality80.jpeg",
+    "id": "perdiendo-el-este",
+    "score": 4.2,
+    "votes": "20",
+  },
+  Object {
+    "artwork": "https://images-3.wuaki.tv/system/artworks/79289/master/creed-ii-la-leyenda-de-rocky-1558478964-width217-quality80.jpeg",
+    "id": "creed-ii-la-leyenda-de-rocky",
+    "score": 6.7,
+    "votes": "2,3K",
+  },
+]
+`;
+
+exports[`MovieListing Selector should return Movie list header 1`] = `"Películas más vistas en Alquiler"`;

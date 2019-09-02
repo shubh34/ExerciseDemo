@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`createEndpointMiddleware getActionTypesWithCacheKey should not return typeWithCacheKey when api not to be cached 1`] = `
+Array [
+  Object {
+    "type": "test",
+  },
+]
+`;
+
+exports[`createEndpointMiddleware getActionTypesWithCacheKey should return typeWithCacheKey when api is to be cached 1`] = `
+Array [
+  Object {
+    "meta": Object {
+      "cacheKey": "cacheKey",
+    },
+    "type": "GET_MOVIE_LIST_BY_CATEGORY_SUCCESS",
+  },
+]
+`;

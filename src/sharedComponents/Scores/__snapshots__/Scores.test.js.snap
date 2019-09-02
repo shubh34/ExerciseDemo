@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<div
+  className="score"
+>
+  <span
+    className="score_rate undefined"
+  >
+    <span
+      className="icon__rate"
+    >
+      2
+    </span>
+  </span>
+  <span
+    className="score_counter undefined"
+  >
+    <span
+      className="icon__profile"
+    >
+      2000
+    </span>
+  </span>
+</div>
+`;
