@@ -44,5 +44,6 @@ RecomendedComponent.propTypes = {
 		id: PropTypes.string.isRequired,
 	})).isRequired,
 	getRecomendedMovies: PropTypes.func.isRequired,
+	movieId: PropTypes.string.isRequired,
 };
 export default connect(mapStateToProps, mapDispatch)(RecomendedComponent);
