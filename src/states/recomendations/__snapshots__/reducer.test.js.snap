@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Reducer movie trailer should update store on GET_MOVIE_RECOMENDATION_SUCCESS 1`] = `
+Object {
+  "movieRecomendation": Array [
+    Object {
+      "movieId": "1",
+    },
+  ],
+  "trailer": Object {
+    "videoUrl": "a/b",
+  },
+}
+`;
+
+exports[`Reducer movie trailer should update storeto default state on GET_MOVIE_RECOMENDATION_REQUEST 1`] = `Object {}`;

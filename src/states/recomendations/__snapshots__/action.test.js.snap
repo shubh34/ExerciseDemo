@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`movie recomendation action should fetch the movie recomendation 1`] = `
+Object {
+  "@@redux-api-middleware/RSAA": Object {
+    "endpoint": "recommendations/movies/test",
+    "headers": Object {
+      "Accept": "application/json",
+      "content-type": "application/json",
+    },
+    "method": "GET",
+    "types": Array [
+      "GET_MOVIE_RECOMENDATION_REQUEST",
+      "GET_MOVIE_RECOMENDATION_SUCCESS",
+      "GET_MOVIE_RECOMENDATION_FAILURE",
+    ],
+  },
+}
+`;

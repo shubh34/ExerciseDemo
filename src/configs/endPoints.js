@@ -20,4 +20,12 @@ export default {
 			return this.url;
 		},
 	},
+	getRecomendationForMovie: {
+		url: 'recommendations/movies/{movieId}',
+		method: 'GET',
+		resolve(movieId) {
+			return this.url.replace('{movieId}', movieId);
+		},
+	},
+
 };

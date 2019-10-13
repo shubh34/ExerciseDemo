@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import cx from 'classnames';
 import './SliderItem.scss';
 import Scores from '../../Scores/Scores';
 
@@ -9,7 +8,7 @@ const SliderItem = ({
 	movie, id, score, votes,
 }) => (
 	<div
-		className={cx('slider-item')}
+		className='slider-item'
 	>
 		<Link className="slider-item-image" to={`/movies/${id}`}>
 			<img width="100%" src={movie} alt="" />

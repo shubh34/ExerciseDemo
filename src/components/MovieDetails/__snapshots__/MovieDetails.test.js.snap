@@ -45,6 +45,9 @@ exports[`MovieDetails should render details of movie 1`] = `
         Capitana Marvel te lleva a una espectacular aventura en los años 90, siguiendo el camino de Carol Danvers (Brie Larson) mientras se convierte en una de las heroínas más poderosas del universo. Cuando la guerra galáctica llega a la Tierra, se encuentra con el agente Nick Furia (Samuel L. Jackson) en el centro del caos, que le lleva a su destino final como Vengador.
       </p>
     </div>
+    <Connect(RecomendedComponent)
+      movieId="test"
+    />
   </div>
 </div>
 `;

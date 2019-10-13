@@ -25,7 +25,6 @@
   },
   "homepage": "https://github.com/shubh34/ExerciseDemo#readme",
   "dependencies": {
-    "classnames": "^2.2.6",
     "lodash": "^4.17.15",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -33,7 +32,8 @@
     "react-router-dom": "^5.0.1",
     "redux": "^4.0.4",
     "redux-api-middleware": "^3.0.1",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "reselect": "^4.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",

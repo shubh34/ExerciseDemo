@@ -67,4 +67,4 @@ Slider.propTypes = {
 	children: PropTypes.arrayOf(PropTypes.element).isRequired,
 };
 
-export default Slider;
+export default React.memo(Slider);

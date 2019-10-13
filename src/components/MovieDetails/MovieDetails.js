@@ -14,6 +14,7 @@ import Scores from '../../sharedComponents/Scores/Scores';
 import RoundAction from '../../sharedComponents/RoundAction/RoundAction';
 import SectionHeader from '../../sharedComponents/SectionHeader/SectionHeader';
 import Header from '../../sharedComponents/Header/Header';
+import RecomendedComponent from '../RecomendedComponent/RecomendedComponent';
 
 const mapStateToProps = state => ({
 	snapShotUrl: getSnapshotImageUrl(state),
@@ -69,6 +70,7 @@ export const MovieDetails = (props) => {
 					<SectionHeader header="Descripción :" />
 					<p>{movieDescription}</p>
 				</div>
+				<RecomendedComponent movieId={movieId} />
 			</div>
 		</div>
 	);
