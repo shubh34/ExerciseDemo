@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "webpack-dev-server --open --mode development",
+    "start": "node server.js",
     "build": "webpack --mode production",
     "format": "prettier --config ./.prettierrc --write ./src/**/*.js .dev/*.js dev/**/*.js",
     "lint": "esw ./src --color",
@@ -25,7 +25,10 @@
   },
   "homepage": "https://github.com/shubh34/ExerciseDemo#readme",
   "dependencies": {
+    "express": "^4.17.1",
+    "express-favicon": "^2.0.1",
     "lodash": "^4.17.15",
+    "path": "^0.12.7",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.1.0",
