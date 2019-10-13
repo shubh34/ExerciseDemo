@@ -54,7 +54,6 @@ module.exports = {
 		host: 'localhost.rakuten.tv',
 		historyApiFallback: true,
 	},
-	devtool: 'inline-source-map',
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: '[name].[contenthash].js',
