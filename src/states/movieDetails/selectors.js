@@ -11,6 +11,6 @@ export const getSnapshotImageUrl = createSelector(getMovieDetails, movieDetails 
 
 export const getMovieDescription = createSelector(getMovieDetails, movieDetails => get(movieDetails, 'data.plot', ''));
 
-export const getScore = createSelector(getMovieDetails, movieDetails => get(movieDetails, 'score', ''));
+export const getScore = createSelector(getHighLightedScore, scores => get(scores, 'score', ''));
 
-export const getVotes = createSelector(getMovieDetails, movieDetails => get(movieDetails, 'formatted_amount_of_votes', ''));
+export const getVotes = createSelector(getHighLightedScore, scores => get(scores, 'formatted_amount_of_votes', ''));
