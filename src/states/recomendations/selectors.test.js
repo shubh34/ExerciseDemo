@@ -14,7 +14,7 @@ const state = {
 				duration: 104,
 				label: '4,99 €',
 				short_plot:
-					'Cuando el detective de talla mundial Harry Goodman desparece en circunstancias muy extrañas, su hijo Tim comienza un viaje para descubrir qué ha ocurrido. Aunque no lo hará solo, le ayudará un investigador adorable y muy divertido que solía ser el compañero Pokémon de Harry, el detective Pikachu...',
+					'Cuando el detective de talla mundial Harry Goodman desparece en circunstancias muy extrañas, su hijo ',
 				images: {
 					artwork: 'https://images-0.wuaki.tv/system/artworks/101478/master/pokemon-detective-pikachu-1564139688.jpeg',
 					snapshot: 'https://images-2.wuaki.tv/system/shots/150638/original/pokemon-detective-pikachu-1564139541.jpeg',

@@ -11,7 +11,7 @@ const setUp = (container = shallow) => {
 		id: '1',
 		movie: 'https://images-2.wuaki.tv/system/artworks/86665/master/capitana-marvel-1560352921.jpeg',
 		score: 22,
-		votes: '6.6k',
+		votes: '6.6k'
 	};
 	const wrapper = container(<SliderItem {...props} />);
 	return { wrapper };

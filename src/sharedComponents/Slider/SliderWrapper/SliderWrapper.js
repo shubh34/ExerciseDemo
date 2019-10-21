@@ -9,7 +9,7 @@ const SliderWrapper = ({ children }) => (
 );
 
 SliderWrapper.propTypes = {
-	children: PropTypes.arrayOf(PropTypes.element).isRequired,
+	children: PropTypes.arrayOf(PropTypes.element).isRequired
 };
 
 export default SliderWrapper;

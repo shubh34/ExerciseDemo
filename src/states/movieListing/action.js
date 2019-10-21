@@ -20,7 +20,6 @@ export const createRSAAMovieListReuest = categoryName => {
 	};
 };
 
-export const fetchMovieListByCategory = categoryName => dispatch =>
-	dispatch(createRSAAMovieListReuest(categoryName)).then(response => {
-		cacheApiResponse(response);
-	});
+export const fetchMovieListByCategory = categoryName => dispatch => dispatch(createRSAAMovieListReuest(categoryName)).then(response => {
+	cacheApiResponse(response);
+});

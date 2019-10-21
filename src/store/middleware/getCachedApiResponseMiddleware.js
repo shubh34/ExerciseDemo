@@ -10,13 +10,12 @@ export const getCachedApiResponseMiddleware = () => () => next => action => {
 		const nextAction = {
 			[RSAA]: {
 				...action[RSAA],
-				fetch: async () =>
-					new Response(JSON.stringify(cachedApiResponse.response), {
-						status: 200,
-						headers: {
-							'Content-Type': 'application/json'
-						}
-					})
+				fetch: async () => new Response(JSON.stringify(cachedApiResponse.response), {
+					status: 200,
+					headers: {
+						'Content-Type': 'application/json'
+					}
+				})
 			}
 		};
 		return next(nextAction);
