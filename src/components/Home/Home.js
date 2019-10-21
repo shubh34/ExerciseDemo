@@ -6,7 +6,6 @@ import PageHeader from '../PageHeader/PageHeader';
 
 const Movies = lazy(() => import('../Movies/Movies'));
 
-
 const Home = () => {
 	useEffect(() => {
 		document.title = content.documentTitle;
