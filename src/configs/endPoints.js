@@ -27,5 +27,4 @@ export default {
 			return this.url.replace('{movieId}', movieId);
 		},
 	},
-
 };

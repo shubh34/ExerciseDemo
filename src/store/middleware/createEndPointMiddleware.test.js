@@ -2,19 +2,16 @@ import { RSAA } from 'redux-api-middleware';
 import { endPointMiddleWare, apiBaseUrl, getActionTypesWithCacheKey } from './createEndPointMiddleware';
 import { GET_MOVIE_LIST_BY_CATEGORY_SUCCESS } from '../../states/movieListing/action';
 
-
-const setup = (
-	next = jest.fn(),
-) => ({
+const setup = (next = jest.fn()) => ({
 	next,
-	middleware: endPointMiddleWare()()(next),
+	middleware: endPointMiddleWare()()(next)
 });
 
 describe('createEndpointMiddleware', () => {
 	it('calls next with original action if not RSAA action', () => {
 		const { middleware, next } = setup();
 		const action = {
-			types: 'DEMO_TEST',
+			types: 'DEMO_TEST'
 		};
 
 		middleware(action);
@@ -27,8 +24,8 @@ describe('createEndpointMiddleware', () => {
 		const action = {
 			[RSAA]: {
 				endpoint: 'test/RSAA',
-				types: [],
-			},
+				types: []
+			}
 		};
 
 		middleware(action);
@@ -37,9 +34,9 @@ describe('createEndpointMiddleware', () => {
 			expect.objectContaining({
 				[RSAA]: {
 					endpoint: `${apiBaseUrl}test/RSAA?classification_id=5&device_identifier=web&locale=es&market_code=es`,
-					types: [],
-				},
-			}),
+					types: []
+				}
+			})
 		);
 	});
 	describe('getActionTypesWithCacheKey', () => {

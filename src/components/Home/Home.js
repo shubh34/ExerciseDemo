@@ -12,8 +12,10 @@ const Home = () => {
 	return (
 		<div>
 			<PageHeader />
-			<div className="movie-listing">
-				{Object.keys(movieCategeries).map(id => <Movies id={movieCategeries[id]} key={id} />)}
+			<div className='movie-listing'>
+				{Object.keys(movieCategeries).map(id => (
+					<Movies id={movieCategeries[id]} key={id} />
+				))}
 			</div>
 		</div>
 	);

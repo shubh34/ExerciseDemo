@@ -9,16 +9,13 @@ import Slider from '../../sharedComponents/Slider/Slider';
 import { getFormattedRecomendedMovieDetails } from '../../states/recomendations/selectors';
 import SliderItem from '../../sharedComponents/Slider/SliderItem/SliderItem';
 
-
 const mapStateToProps = state => ({
-	recomendedMovies: getFormattedRecomendedMovieDetails(state),
+	recomendedMovies: getFormattedRecomendedMovieDetails(state)
 });
 
 const mapDispatch = dispatch => ({
-	getRecomendedMovies: id => dispatch(fetchRecomendationForMovie(id)),
-
+	getRecomendedMovies: id => dispatch(fetchRecomendationForMovie(id))
 });
-
 
 export class RecomendedComponent extends Component {
 	componentDidMount() {
@@ -30,9 +27,11 @@ export class RecomendedComponent extends Component {
 		const { recomendedMovies } = this.props;
 		return (
 			<div>
-				<Header header="More movies you may like" />
+				<Header header='More movies you may like' />
 				<Slider>
-					{ recomendedMovies.map(movie => <SliderItem id={movie.id} score={movie.score} votes={movie.votes} movie={movie.artwork} />)}
+					{recomendedMovies.map(movie => (
+						<SliderItem id={movie.id} score={movie.score} votes={movie.votes} movie={movie.artwork} />
+					))}
 				</Slider>
 			</div>
 		);
@@ -40,10 +39,15 @@ export class RecomendedComponent extends Component {
 }
 
 RecomendedComponent.propTypes = {
-	recomendedMovies: PropTypes.arrayOf(PropTypes.shape({
-		id: PropTypes.string.isRequired,
-	})).isRequired,
+	recomendedMovies: PropTypes.arrayOf(
+		PropTypes.shape({
+			id: PropTypes.string.isRequired
+		})
+	).isRequired,
 	getRecomendedMovies: PropTypes.func.isRequired,
-	movieId: PropTypes.string.isRequired,
+	movieId: PropTypes.string.isRequired
 };
-export default connect(mapStateToProps, mapDispatch)(RecomendedComponent);
+export default connect(
+	mapStateToProps,
+	mapDispatch
+)(RecomendedComponent);

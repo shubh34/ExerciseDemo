@@ -5,8 +5,7 @@ export const GET_MOVIE_TRAILOR_REQUEST = 'GET_MOVIE_TRAILOR_REQUEST';
 export const GET_MOVIE_TRAILOR_SUCCESS = 'GET_MOVIE_TRAILOR_SUCCESS';
 export const GET_MOVIE_TRAILOR_FAILURE = 'GET_MOVIE_TRAILOR_FAILURE';
 
-
-export const getMovieTrailer = (id) => {
+export const getMovieTrailer = id => {
 	const endPoint = endPoints.getMovieTrailer;
 	const url = endPoint.resolve();
 	return {
@@ -15,8 +14,7 @@ export const getMovieTrailer = (id) => {
 			method: endPoint.method,
 			headers: {
 				Accept: 'application/json',
-				'content-type': 'application/json',
-
+				'content-type': 'application/json'
 			},
 			body: JSON.stringify({
 				audio_language: 'SPA',
@@ -27,9 +25,9 @@ export const getMovieTrailer = (id) => {
 				device_stream_video_quality: 'FHD',
 				player: 'web:PD-NONE',
 				subtitle_language: 'MIS',
-				video_type: 'trailer',
+				video_type: 'trailer'
 			}),
-			types: [GET_MOVIE_TRAILOR_REQUEST, GET_MOVIE_TRAILOR_SUCCESS, GET_MOVIE_TRAILOR_FAILURE],
-		},
+			types: [GET_MOVIE_TRAILOR_REQUEST, GET_MOVIE_TRAILOR_SUCCESS, GET_MOVIE_TRAILOR_FAILURE]
+		}
 	};
 };

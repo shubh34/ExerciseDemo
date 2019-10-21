@@ -8,7 +8,7 @@
     "start": "node server.js",
     "start:dev": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production",
-    "format": "prettier --config ./.prettierrc --write ./src/**/*.js .dev/*.js dev/**/*.js",
+    "format": "prettier --config ./.prettierrc --write ./src/**/**/*.js .dev/*.js dev/**/*.js",
     "lint": "esw ./src --color",
     "test:coverage": "npm test -- --coverage"
   },
