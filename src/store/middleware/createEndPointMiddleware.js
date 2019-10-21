@@ -6,18 +6,19 @@ export const apiBaseUrl = 'https://gizmo.rakuten.tv/v3/';
 
 export const apiToBeCached = [GET_MOVIE_LIST_BY_CATEGORY_SUCCESS];
 
-export const getActionTypesWithCacheKey = (types, endPointWithQueryParam) => types.map(action => {
-	if (action instanceof Object && apiToBeCached.includes(action.type)) {
-		return {
-			...action,
-			meta: {
-				...action.meta,
-				cacheKey: endPointWithQueryParam
-			}
-		};
-	}
-	return action;
-});
+export const getActionTypesWithCacheKey = (types, endPointWithQueryParam) =>
+	types.map(action => {
+		if (action instanceof Object && apiToBeCached.includes(action.type)) {
+			return {
+				...action,
+				meta: {
+					...action.meta,
+					cacheKey: endPointWithQueryParam
+				}
+			};
+		}
+		return action;
+	});
 
 export const endPointMiddleWare = () => () => next => action => {
 	if (!isRSAA(action)) {
