@@ -4,5 +4,5 @@ export const movieCategeries = {
 	3: 'estrenos-imprescindibles-en-taquilla',
 	4: 'estrenos-espanoles',
 	5: 'si-te-perdiste',
-	6: 'nuestras-preferidas-de-la-semana',
+	6: 'nuestras-preferidas-de-la-semana'
 };

@@ -9,13 +9,11 @@ const MovieDetails = lazy(() => import('../MovieDetails/MovieDetails'));
 const MovieTrailer = lazy(() => import('../MovieTrailer/MovieTrailer'));
 const Home = lazy(() => import('../Home/Home'));
 
-
 const store = configureStore();
 
 const App = () => (
-	<div className="app">
+	<div className='app'>
 		<Provider store={store}>
-
 			<Router>
 				<Suspense fallback={<div>Loading...</div>}>
 					<Switch>

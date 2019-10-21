@@ -6,7 +6,6 @@ import { trailer } from '../../../tests-stub/Trailer';
 import { getMovieTrailerUrl } from '../../states/trailer/selectors';
 import BackButton from '../../sharedComponents/BackButton/BackButton';
 
-
 const setUp = (setUpProps = {}, container = shallow) => {
 	const state = { trailer };
 	const props = {
@@ -15,13 +14,13 @@ const setUp = (setUpProps = {}, container = shallow) => {
 
 		match: {
 			params: {
-				id: 'test',
-			},
+				id: 'test'
+			}
 		},
 		history: {
-			goBack: jest.fn(),
+			goBack: jest.fn()
 		},
-		...setUpProps,
+		...setUpProps
 	};
 	const wrapper = container(<MovieTrailer {...props} />);
 	return { wrapper, props };

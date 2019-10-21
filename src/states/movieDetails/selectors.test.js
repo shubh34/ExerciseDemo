@@ -1,8 +1,4 @@
-
-
-import {
-	getMovieTitle, getSnapshotImageUrl, getMovieDescription, getVotes, getScore,
-} from './selectors';
+import { getMovieTitle, getSnapshotImageUrl, getMovieDescription, getVotes, getScore } from './selectors';
 import { movieDetailsStub } from '../../../tests-stub/MovieDetails';
 
 const state = { movieDetails: movieDetailsStub };

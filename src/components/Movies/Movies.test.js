@@ -5,7 +5,6 @@ import { Movies } from './Movies';
 import { rawMovies } from '../../../tests-stub/Movies';
 import { getMovieListByCategory } from '../../states/movieListing/selectors';
 
-
 const setUp = (setUpProps = {}, container = shallow) => {
 	const state = { movieListing: rawMovies };
 	const props = {
@@ -13,7 +12,7 @@ const setUp = (setUpProps = {}, container = shallow) => {
 		fetchMovieList: jest.fn(),
 		movieCategoryHeader: 'listingHeader',
 		movieList: getMovieListByCategory(state, 'populares-en-taquilla'),
-		...setUpProps,
+		...setUpProps
 	};
 	const wrapper = container(<Movies {...props} />);
 	return { wrapper, props };

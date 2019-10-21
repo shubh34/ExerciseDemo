@@ -5,5 +5,8 @@ import trailer from '../../states/trailer/reducer';
 import recomendations from '../../states/recomendations/reducer';
 
 export default combineReducers({
-	movieListing, movieDetails, trailer, recomendations,
+	movieListing,
+	movieDetails,
+	trailer,
+	recomendations
 });

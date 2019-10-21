@@ -2,19 +2,16 @@ import { RSAA } from 'redux-api-middleware';
 import { getCachedApiResponseMiddleware } from './getCachedApiResponseMiddleware';
 import { cacheApiResponse } from '../../utils/cacheApiUtils';
 
-
-const setup = (
-	next = jest.fn(),
-) => ({
+const setup = (next = jest.fn()) => ({
 	next,
-	middleware: getCachedApiResponseMiddleware()()(next),
+	middleware: getCachedApiResponseMiddleware()()(next)
 });
 
 describe('getCachedApiResponseMiddleware', () => {
 	it('calls next with original action if not RSAA action', () => {
 		const { middleware, next } = setup();
 		const action = {
-			type: 'DEMO_TEST',
+			type: 'DEMO_TEST'
 		};
 
 		middleware(action);
@@ -25,15 +22,14 @@ describe('getCachedApiResponseMiddleware', () => {
 		const { middleware, next } = setup();
 		const response = {
 			meta: { cacheKey: 'GET_MOVIE_LIST_BY_CATEGORY_SUCCESS' },
-			payload: { test: 'new Response' },
+			payload: { test: 'new Response' }
 		};
 		cacheApiResponse(response);
 		const action = {
 			[RSAA]: {
 				endpoint: 'test/RSAA',
-				types: ['GET_MOVIE_LIST_BY_CATEGORY_SUCCESS'],
-			},
-
+				types: ['GET_MOVIE_LIST_BY_CATEGORY_SUCCESS']
+			}
 		};
 
 		middleware(action);
@@ -45,8 +41,8 @@ describe('getCachedApiResponseMiddleware', () => {
 
 		const action = {
 			[RSAA]: {
-				endpoint: 'test/RSAA',
-			},
+				endpoint: 'test/RSAA'
+			}
 		};
 
 		middleware(action);
@@ -54,9 +50,9 @@ describe('getCachedApiResponseMiddleware', () => {
 		expect(next).toBeCalledWith(
 			expect.objectContaining({
 				[RSAA]: {
-					endpoint: 'test/RSAA',
-				},
-			}),
+					endpoint: 'test/RSAA'
+				}
+			})
 		);
 	});
 });

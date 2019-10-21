@@ -4,10 +4,13 @@ import { shallow } from 'enzyme';
 import { MovieDetails } from './MovieDetails';
 import { movieDetailsStub } from '../../../tests-stub/MovieDetails';
 import {
-	getSnapshotImageUrl, getMovieTitle, getMovieDescription, getScore, getVotes,
+	getSnapshotImageUrl,
+	getMovieTitle,
+	getMovieDescription,
+	getScore,
+	getVotes
 } from '../../states/movieDetails/selectors';
 import RoundAction from '../../sharedComponents/RoundAction/RoundAction';
-
 
 const setUp = (setUpProps = {}, container = shallow) => {
 	const state = { movieDetails: movieDetailsStub };
@@ -22,13 +25,13 @@ const setUp = (setUpProps = {}, container = shallow) => {
 		onShowTrailor: jest.fn(),
 		match: {
 			params: {
-				id: 'test',
-			},
+				id: 'test'
+			}
 		},
 		history: {
-			push: jest.fn(),
+			push: jest.fn()
 		},
-		...setUpProps,
+		...setUpProps
 	};
 	const wrapper = container(<MovieDetails {...props} />);
 	return { wrapper, props };
