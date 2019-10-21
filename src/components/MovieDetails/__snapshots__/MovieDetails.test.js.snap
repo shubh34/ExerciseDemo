@@ -6,7 +6,7 @@ exports[`MovieDetails should render details of movie 1`] = `
   <div
     className="movie-details"
   >
-    <MovieDetailsHero
+    <Memo(MovieDetailsHero)
       heroUrl="https://images-3.wuaki.tv/system/shots/144189/original/capitana-marvel-1560352960-width1920-quality80.jpeg"
       onClick={[Function]}
     >
@@ -23,7 +23,7 @@ exports[`MovieDetails should render details of movie 1`] = `
         <div
           className="details_meta"
         >
-          <Scores
+          <Memo(Scores)
             className="movie-details-score"
             score={7}
             votes="6,5K"
@@ -34,7 +34,7 @@ exports[`MovieDetails should render details of movie 1`] = `
           />
         </div>
       </div>
-    </MovieDetailsHero>
+    </Memo(MovieDetailsHero)>
     <div
       className="movie-details-description"
     >

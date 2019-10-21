@@ -22,4 +22,4 @@ SliderItem.propTypes = {
 	votes: PropTypes.string.isRequired
 };
 
-export default SliderItem;
+export default React.memo(SliderItem);

@@ -21,4 +21,4 @@ Scores.propTypes = {
 	votes: PropTypes.string.isRequired,
 	className: PropTypes.string
 };
-export default Scores;
+export default React.memo(Scores);

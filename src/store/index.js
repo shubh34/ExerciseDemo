@@ -6,11 +6,12 @@ import reducers from './reducers';
 import { endPointMiddleWare } from './middleware/createEndPointMiddleware';
 import { getCachedApiResponseMiddleware } from './middleware/getCachedApiResponseMiddleware';
 
-export default (initialState = {}) => createStore(
-	reducers,
-	initialState,
-	compose(
-		applyMiddleware(endPointMiddleWare(), getCachedApiResponseMiddleware(), apiMiddleware, thunk),
-		window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__() : f => f
-	)
-);
+export default (initialState = {}) =>
+	createStore(
+		reducers,
+		initialState,
+		compose(
+			applyMiddleware(endPointMiddleWare(), getCachedApiResponseMiddleware(), apiMiddleware, thunk),
+			window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__() : f => f
+		)
+	);

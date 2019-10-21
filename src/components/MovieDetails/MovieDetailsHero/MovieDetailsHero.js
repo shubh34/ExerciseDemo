@@ -15,6 +15,8 @@ export const MovieDetailsHero = (props) => {
 	);
 };
 
+export default React.memo(MovieDetailsHero);
+
 MovieDetailsHero.propTypes = {
 	heroUrl: PropTypes.string.isRequired,
 	children: PropTypes.element.isRequired

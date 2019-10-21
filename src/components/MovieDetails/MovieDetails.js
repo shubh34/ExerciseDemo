@@ -1,9 +1,9 @@
 import './MovieDetails.scss';
 
-import React, { useEffect } from 'react';
+import React, { useEffect, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { MovieDetailsHero } from './MovieDetailsHero/MovieDetailsHero';
+import MovieDetailsHero from './MovieDetailsHero/MovieDetailsHero';
 import {
 	getSnapshotImageUrl,
 	getMovieTitle,
@@ -63,7 +63,7 @@ export const MovieDetails = props => {
 	};
 
 	return (
-		<div>
+		<Fragment>
 			<PageHeader />
 			<div className='movie-details'>
 				<MovieDetailsHero heroUrl={snapShotUrl} onClick={onShowTrailor}>
@@ -83,7 +83,7 @@ export const MovieDetails = props => {
 				</div>
 				<RecomendedComponent movieId={movieId} />
 			</div>
-		</div>
+		</Fragment>
 	);
 };
 

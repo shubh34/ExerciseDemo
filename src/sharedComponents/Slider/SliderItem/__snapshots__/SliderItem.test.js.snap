@@ -14,7 +14,7 @@ exports[`SliderItem should render SliderItem 1`] = `
       width="100%"
     />
   </Link>
-  <Scores
+  <Memo(Scores)
     score={22}
     votes="6.6k"
   />
