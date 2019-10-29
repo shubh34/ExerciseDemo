@@ -1,4 +1,4 @@
-/* eslint-disable no-underscore-dangle */
+
 import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { apiMiddleware } from 'redux-api-middleware';
