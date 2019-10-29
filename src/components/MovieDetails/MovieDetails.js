@@ -4,13 +4,7 @@ import React, { useEffect, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import MovieDetailsHero from './MovieDetailsHero/MovieDetailsHero';
-import {
-	getSnapshotImageUrl,
-	getMovieTitle,
-	getMovieDescription,
-	getScore,
-	getVotes
-} from '../../states/movieDetails/selectors';
+import { getSnapshotImageUrl, getMovieTitle, getMovieDescription, getScore, getVotes } from '../../states/movieDetails/selectors';
 import { getMovieDetails, resetMovieDetails } from '../../states/movieDetails/action';
 import { getMovieTrailer } from '../../states/trailer/action';
 import PageHeader from '../PageHeader/PageHeader';

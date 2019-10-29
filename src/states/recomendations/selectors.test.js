@@ -13,8 +13,7 @@ const state = {
 				year: 2019,
 				duration: 104,
 				label: '4,99 €',
-				short_plot:
-					'Cuando el detective de talla mundial Harry Goodman desparece en circunstancias muy extrañas, su hijo ',
+				short_plot: 'Cuando el detective de talla mundial Harry Goodman desparece en circunstancias muy extrañas, su hijo ',
 				images: {
 					artwork: 'https://images-0.wuaki.tv/system/artworks/101478/master/pokemon-detective-pikachu-1564139688.jpeg',
 					snapshot: 'https://images-2.wuaki.tv/system/shots/150638/original/pokemon-detective-pikachu-1564139541.jpeg',
