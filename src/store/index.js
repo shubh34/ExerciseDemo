@@ -8,12 +8,10 @@ import { endPointMiddleWare } from './middleware/createEndPointMiddleware';
 import { getCachedApiResponseMiddleware } from './middleware/getCachedApiResponseMiddleware';
 
 export default (initialState = {}) => {
-	const middleWares = process.env.NODE_ENV === 'production'
+	const middleWares =	process.env.NODE_ENV === 'production'
 		? applyMiddleware(endPointMiddleWare(), getCachedApiResponseMiddleware(), apiMiddleware, thunk)
-		: composeWithDevTools(applyMiddleware(endPointMiddleWare(), getCachedApiResponseMiddleware(), apiMiddleware, thunk));
-	return createStore(
-		reducers,
-		initialState,
-		middleWares
-	);
+		: composeWithDevTools(
+			applyMiddleware(endPointMiddleWare(), getCachedApiResponseMiddleware(), apiMiddleware, thunk)
+		);
+	return createStore(reducers, initialState, middleWares);
 };
