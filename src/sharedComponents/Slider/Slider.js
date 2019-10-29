@@ -1,11 +1,11 @@
 /* eslint-disable no-return-assign */
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import './Slider.scss';
 import SliderWrapper from './SliderWrapper/SliderWrapper';
 import SlideButton from './SlideButton/SlideButton';
 
-class Slider extends Component {
+class Slider extends PureComponent {
 	constructor(props) {
 		super(props);
 		this.handleNext = this.handleNext.bind(this);
@@ -73,4 +73,4 @@ Slider.propTypes = {
 	children: PropTypes.arrayOf(PropTypes.element).isRequired
 };
 
-export default React.memo(Slider);
+export default Slider;

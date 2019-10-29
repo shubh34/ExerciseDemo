@@ -6,6 +6,7 @@ exports[`RoundAction renders without crashing 1`] = `
 >
   <button
     className="round-action_element"
+    name="xyz"
     onClick={[MockFunction]}
     type="button"
   />

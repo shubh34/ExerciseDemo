@@ -23,7 +23,7 @@ exports[`MovieDetails should render details of movie 1`] = `
         <div
           className="details_meta"
         >
-          <Memo(Scores)
+          <Scores
             className="movie-details-score"
             score={7}
             votes="6,5K"

@@ -8,7 +8,7 @@ const SliderItem = ({
 	movie, id, score, votes
 }) => (
 	<div className='slider-item'>
-		<Link className="slider-item-image" to={`/movies/${id}`}>
+		<Link name={id} className="slider-item-image" to={`/movies/${id}`}>
 			<img width="100%" src={movie} alt="" />
 		</Link>
 		<Scores score={score} votes={votes} />

@@ -10,7 +10,8 @@
     "build": "webpack --mode production",
     "format": "prettier --config ./.prettierrc --write ./src/**/**/*.js  ./src/**/*.js .dev/*.js dev/**/*.js",
     "lint": "esw ./src --color",
-    "test:coverage": "npm test -- --coverage"
+    "test:coverage": "npm test -- --coverage",
+    "analyze": "source-map-explorer 'dist/*.js'"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "express-favicon": "^2.0.1",
+    "express-static-gzip": "^2.0.5",
     "lodash": "^4.17.15",
     "path": "^0.12.7",
     "react": "^16.8.6",
@@ -38,6 +40,7 @@
     "redux-api-middleware": "^3.0.1",
     "redux-thunk": "^2.3.0",
     "reselect": "^4.0.0"
+
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -78,7 +81,9 @@
     "style-loader": "^1.0.0",
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6",
-    "webpack-dev-server": "^3.8.0"
+    "webpack-dev-server": "^3.8.0",
+    "compression-webpack-plugin": "^3.0.0",
+    "source-map-explorer": "^2.1.0"
   },
   "husky": {
     "hooks": {
