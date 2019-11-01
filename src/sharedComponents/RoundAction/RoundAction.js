@@ -6,7 +6,7 @@ const RoundAction = props => {
 	const { title = 'Trailer', onClick } = props;
 	return (
 		<div className='round-action'>
-			<button type='button' className='round-action_element' onClick={onClick} />
+			<button type='button' name={title} className='round-action_element' onClick={onClick} />
 			<span className='round-action_title'>{title}</span>
 		</div>
 	);

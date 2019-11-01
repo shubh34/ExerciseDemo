@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MovieDetails should render details of movie 1`] = `
-<div>
+<Fragment>
   <PageHeader />
   <div
     className="movie-details"
   >
-    <MovieDetailsHero
+    <Memo(MovieDetailsHero)
       heroUrl="https://images-3.wuaki.tv/system/shots/144189/original/capitana-marvel-1560352960-width1920-quality80.jpeg"
       onClick={[Function]}
     >
@@ -34,7 +34,7 @@ exports[`MovieDetails should render details of movie 1`] = `
           />
         </div>
       </div>
-    </MovieDetailsHero>
+    </Memo(MovieDetailsHero)>
     <div
       className="movie-details-description"
     >
@@ -49,5 +49,5 @@ exports[`MovieDetails should render details of movie 1`] = `
       movieId="test"
     />
   </div>
-</div>
+</Fragment>
 `;

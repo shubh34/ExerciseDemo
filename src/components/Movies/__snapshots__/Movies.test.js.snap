@@ -7,63 +7,63 @@ exports[`Movies should render Movies in Sliders 1`] = `
   <SectionHeader
     header="listingHeader"
   />
-  <Memo(Slider)>
-    <SliderItem
+  <Slider>
+    <Memo(SliderItem)
       id="capitana-marvel"
       key="0"
       movie="https://images-2.wuaki.tv/system/artworks/86665/master/capitana-marvel-1560352921-width217-quality80.jpeg"
       score={7}
       votes="6,5K"
     />
-    <SliderItem
+    <Memo(SliderItem)
       id="a-47-metros"
       key="1"
       movie="https://images-3.wuaki.tv/system/artworks/54649/master/a-47-metros-1558460397-width217-quality80.jpeg"
       score={5.6}
       votes="1,6K"
     />
-    <SliderItem
+    <Memo(SliderItem)
       id="green-book"
       key="2"
       movie="https://images-2.wuaki.tv/system/artworks/86659/master/green-book-1558483188-width217-quality80.jpeg"
       score={8.3}
       votes="4K"
     />
-    <SliderItem
+    <Memo(SliderItem)
       id="mascotas"
       key="3"
       movie="https://images-2.wuaki.tv/system/artworks/43779/master/mascotas-1558452275-width217-quality80.jpeg"
       score={6.1}
       votes="5,6K"
     />
-    <SliderItem
+    <Memo(SliderItem)
       id="mula"
       key="4"
       movie="https://images-2.wuaki.tv/system/artworks/89878/master/mula-1558485497-width217-quality80.jpeg"
       score={6.5}
       votes="1,8K"
     />
-    <SliderItem
+    <Memo(SliderItem)
       id="escape-room-2019"
       key="5"
       movie="https://images-0.wuaki.tv/system/artworks/89879/master/escape-room-2019-1559899512-width217-quality80.jpeg"
       score={6.4}
       votes="1,5K"
     />
-    <SliderItem
+    <Memo(SliderItem)
       id="perdiendo-el-este"
       key="6"
       movie="https://images-1.wuaki.tv/system/artworks/86635/master/perdiendo-el-este-1559228752-width217-quality80.jpeg"
       score={4.2}
       votes="20"
     />
-    <SliderItem
+    <Memo(SliderItem)
       id="creed-ii-la-leyenda-de-rocky"
       key="7"
       movie="https://images-3.wuaki.tv/system/artworks/79289/master/creed-ii-la-leyenda-de-rocky-1558478964-width217-quality80.jpeg"
       score={6.7}
       votes="2,3K"
     />
-  </Memo(Slider)>
+  </Slider>
 </div>
 `;

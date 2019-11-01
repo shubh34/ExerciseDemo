@@ -1,16 +1,10 @@
 import './MovieDetails.scss';
 
-import React, { useEffect } from 'react';
+import React, { useEffect, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { MovieDetailsHero } from './MovieDetailsHero/MovieDetailsHero';
-import {
-	getSnapshotImageUrl,
-	getMovieTitle,
-	getMovieDescription,
-	getScore,
-	getVotes
-} from '../../states/movieDetails/selectors';
+import MovieDetailsHero from './MovieDetailsHero/MovieDetailsHero';
+import { getSnapshotImageUrl, getMovieTitle, getMovieDescription, getScore, getVotes } from '../../states/movieDetails/selectors';
 import { getMovieDetails, resetMovieDetails } from '../../states/movieDetails/action';
 import { getMovieTrailer } from '../../states/trailer/action';
 import PageHeader from '../PageHeader/PageHeader';
@@ -63,7 +57,7 @@ export const MovieDetails = props => {
 	};
 
 	return (
-		<div>
+		<Fragment>
 			<PageHeader />
 			<div className='movie-details'>
 				<MovieDetailsHero heroUrl={snapShotUrl} onClick={onShowTrailor}>
@@ -83,7 +77,7 @@ export const MovieDetails = props => {
 				</div>
 				<RecomendedComponent movieId={movieId} />
 			</div>
-		</div>
+		</Fragment>
 	);
 };
 

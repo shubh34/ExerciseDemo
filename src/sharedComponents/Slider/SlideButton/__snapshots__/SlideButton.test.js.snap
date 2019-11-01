@@ -3,6 +3,7 @@
 exports[`SlideButton renders without crashing 1`] = `
 <button
   className="slide-button slide-button--next"
+  name="slide-next"
   onClick={[MockFunction]}
   type="button"
 >

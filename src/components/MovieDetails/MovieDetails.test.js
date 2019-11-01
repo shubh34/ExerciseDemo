@@ -3,13 +3,7 @@ import { shallow } from 'enzyme';
 
 import { MovieDetails } from './MovieDetails';
 import { movieDetailsStub } from '../../../tests-stub/MovieDetails';
-import {
-	getSnapshotImageUrl,
-	getMovieTitle,
-	getMovieDescription,
-	getScore,
-	getVotes
-} from '../../states/movieDetails/selectors';
+import { getSnapshotImageUrl, getMovieTitle, getMovieDescription, getScore, getVotes } from '../../states/movieDetails/selectors';
 import RoundAction from '../../sharedComponents/RoundAction/RoundAction';
 
 const setUp = (setUpProps = {}, container = shallow) => {

@@ -6,6 +6,7 @@ exports[`SliderItem should render SliderItem 1`] = `
 >
   <Link
     className="slider-item-image"
+    name="1"
     to="/movies/1"
   >
     <img

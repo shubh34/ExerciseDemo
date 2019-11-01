@@ -45,7 +45,9 @@ Movies.propTypes = {
 	),
 	fetchMovieList: PropTypes.func.isRequired
 };
-export default connect(
-	mapState,
-	mapDispatch
-)(Movies);
+export default React.memo(
+	connect(
+		mapState,
+		mapDispatch
+	)(Movies)
+);
