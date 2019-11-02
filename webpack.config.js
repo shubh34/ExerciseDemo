@@ -3,6 +3,7 @@ const CompressionPlugin = require('compression-webpack-plugin');
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 // auto prefixer and post css
+
 module.exports = {
 	module: {
 		rules: [
