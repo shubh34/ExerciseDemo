@@ -40,7 +40,6 @@
     "redux-api-middleware": "^3.0.1",
     "redux-thunk": "^2.3.0",
     "reselect": "^4.0.0"
-
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -51,6 +50,7 @@
     "babel-loader": "^8.0.6",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "clean-webpack-plugin": "^3.0.0",
+    "compression-webpack-plugin": "^3.0.1",
     "css-loader": "^3.2.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
@@ -78,12 +78,11 @@
     "redux-mock-store": "^1.5.3",
     "regenerator-runtime": "^0.13.3",
     "sass-loader": "^7.2.0",
+    "source-map-explorer": "^2.1.0",
     "style-loader": "^1.0.0",
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6",
-    "webpack-dev-server": "^3.8.0",
-    "compression-webpack-plugin": "^3.0.0",
-    "source-map-explorer": "^2.1.0"
+    "webpack-dev-server": "^3.8.0"
   },
   "husky": {
     "hooks": {
