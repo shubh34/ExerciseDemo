@@ -6,7 +6,7 @@ import Logo from '../../sharedComponents/Logo/Logo';
 
 const PageHeader = () => (
 	<nav className='nav'>
-		<Link to="/">
+		<Link to='/'>
 			<Logo />
 		</Link>
 	</nav>

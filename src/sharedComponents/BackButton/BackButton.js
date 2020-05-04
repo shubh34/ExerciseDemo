@@ -4,14 +4,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const BackButton = ({ onClick, title = 'Back' }) => (
-	<div className="back-button">
-		<button type="button" name="go back" onClick={onClick}>{title}</button>
+	<div className='back-button'>
+		<button type='button' name='go back' onClick={onClick}>
+			{title}
+		</button>
 	</div>
-
 );
 BackButton.propTypes = {
 	onClick: PropTypes.func.isRequired,
-	title: PropTypes.string,
+	title: PropTypes.string
 };
 
 export default BackButton;

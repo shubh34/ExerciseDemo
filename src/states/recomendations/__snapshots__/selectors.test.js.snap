@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Recomendation Selector should return formated movies  1`] = `
+Array [
+  Object {
+    "artwork": "https://images-0.wuaki.tv/system/artworks/101478/master/pokemon-detective-pikachu-1564139688-width217-quality80.jpeg",
+    "id": "pokemon-detective-pikachu",
+    "score": 6.9,
+    "votes": "2,5K",
+  },
+]
+`;
+
+exports[`Recomendation Selector should return getRecommendedMovies as empty 1`] = `Array []`;
+
+exports[`Recomendation Selector should return recomended movies with details  1`] = `
+Array [
+  Object {
+    "classification": Object {
+      "adult": false,
+      "age": 0,
+      "default": false,
+      "description": "Mostrar sólo contenidos autorizados para todos los públicos",
+      "id": "1",
+      "name": "T",
+      "numerical_id": 1,
+      "type": "classifications",
+    },
+    "display_name": "Pokémon: Detective Pikachu",
+    "duration": 104,
+    "highlighted_score": Object {
+      "amount_of_votes": 2471,
+      "formatted_amount_of_votes": "2,5K",
+      "score": 6.9,
+    },
+    "id": "pokemon-detective-pikachu",
+    "images": Object {
+      "artwork": "https://images-0.wuaki.tv/system/artworks/101478/master/pokemon-detective-pikachu-1564139688.jpeg",
+      "ribbons": Array [
+        Object {
+          "color": "#ffcc00",
+          "id": "6",
+          "image": "https://images-1.wuaki.tv/system/images/6/original/uhd-1418228576.png",
+          "localized_name": "UHD",
+          "name": "UHD",
+          "numerical_id": 6,
+          "position": "top-left",
+          "text_color": "#000000",
+          "type": "ribbons",
+        },
+      ],
+      "snapshot": "https://images-2.wuaki.tv/system/shots/150638/original/pokemon-detective-pikachu-1564139541.jpeg",
+    },
+    "label": "4,99 €",
+    "labels": Object {
+      "audio_qualities": Array [
+        Object {
+          "abbr": "2.0",
+          "id": "2.0",
+          "image": "https://images-1.wuaki.tv/system/logos/2/original/2-0-stereo-1456155689.png",
+          "name": "2.0 (Stereo)",
+          "numerical_id": 2,
+          "type": "audio_qualities",
+        },
+      ],
+      "hdr_types": Array [
+        Object {
+          "abbr": "NONE",
+          "id": "NONE",
+          "image": null,
+          "name": "SDR",
+          "numerical_id": 1,
+          "type": "hdr_types",
+        },
+      ],
+      "purchase_types": Array [
+        Object {
+          "available_time_in_seconds": 172800,
+          "expires_after_in_seconds": 172800,
+          "id": "1",
+          "is_recurring": false,
+          "kind": "rental",
+          "label": "ALQUILER 48H",
+          "name": "Alquiler 48H",
+          "numerical_id": 1,
+          "type": "purchase_types",
+        },
+      ],
+    },
+    "numerical_id": 101478,
+    "provider_id": 2,
+    "rating": Object {
+      "average": 4,
+      "scale": 5,
+    },
+    "short_plot": "Cuando el detective de talla mundial Harry Goodman desparece en circunstancias muy extrañas, su hijo ",
+    "title": "Pokémon: Detective Pikachu",
+    "type": "movies",
+    "year": 2019,
+  },
+]
+`;

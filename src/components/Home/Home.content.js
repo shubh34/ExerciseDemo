@@ -1,5 +1,5 @@
 const content = {
-	documentTitle: 'Rakuten Tv- Your cinema at home',
+	documentTitle: 'Rakuten Tv- Your cinema at home'
 };
 
 export default content;

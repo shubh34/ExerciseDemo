@@ -73,5 +73,11 @@ React, Redux, Jest, Enzyme, Webpack, Prettier, Eslint, Lodash
 - `Short description on movie details page`
 
 
+## Docker 
+`image creation `: docker build -t image-name .
+`image creation production`: docker build -f Dockerfile-prod -t image-name .
+`run a docker image`: docker run -it -p 80:80 --rm image-name
+
+
 
 

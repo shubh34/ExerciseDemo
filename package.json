@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "webpack-dev-server --open --mode development",
+    "start": "node server.js",
+    "start:dev": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production",
-    "format": "prettier --config ./.prettierrc --write ./src/**/*.js .dev/*.js dev/**/*.js",
+    "format": "prettier --config ./.prettierrc --write ./src/**/**/*.js  ./src/**/*.js .dev/*.js dev/**/*.js",
     "lint": "esw ./src --color",
-    "test:coverage": "npm test -- --coverage"
+    "test:coverage": "npm test -- --coverage",
+    "analyze": "source-map-explorer 'dist/*.js'"
   },
   "repository": {
     "type": "git",
@@ -25,15 +27,19 @@
   },
   "homepage": "https://github.com/shubh34/ExerciseDemo#readme",
   "dependencies": {
-    "classnames": "^2.2.6",
+    "express": "^4.17.1",
+    "express-favicon": "^2.0.1",
+    "express-static-gzip": "^2.0.5",
     "lodash": "^4.17.15",
+    "path": "^0.12.7",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.1.0",
     "react-router-dom": "^5.0.1",
     "redux": "^4.0.4",
     "redux-api-middleware": "^3.0.1",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "reselect": "^4.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -42,7 +48,9 @@
     "autoprefixer": "^9.6.1",
     "babel-eslint": "^10.0.2",
     "babel-loader": "^8.0.6",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "clean-webpack-plugin": "^3.0.0",
+    "compression-webpack-plugin": "^3.0.1",
     "css-loader": "^3.2.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
@@ -56,6 +64,7 @@
     "eslint-watch": "^6.0.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^3.0.9",
     "identity-obj-proxy": "^3.0.0",
     "isomorphic-fetch": "^2.2.1",
     "jest": "^24.8.0",
@@ -69,9 +78,16 @@
     "redux-mock-store": "^1.5.3",
     "regenerator-runtime": "^0.13.3",
     "sass-loader": "^7.2.0",
+    "source-map-explorer": "^2.1.0",
     "style-loader": "^1.0.0",
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6",
     "webpack-dev-server": "^3.8.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run format",
+      "pre-push": "npm test"
+    }
   }
 }

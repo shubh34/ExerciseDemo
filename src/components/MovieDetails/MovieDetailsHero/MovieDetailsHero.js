@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 export const MovieDetailsHero = (props) => {
 	const { heroUrl, children } = props;
 	const style = {
-		backgroundImage: `url(${heroUrl})`,
+		backgroundImage: `url(${heroUrl})`
 	};
 	return (
 		<div className="movie-details_hero" style={style}>
@@ -15,7 +15,9 @@ export const MovieDetailsHero = (props) => {
 	);
 };
 
+export default React.memo(MovieDetailsHero);
+
 MovieDetailsHero.propTypes = {
 	heroUrl: PropTypes.string.isRequired,
-	children: PropTypes.element.isRequired,
+	children: PropTypes.element.isRequired
 };

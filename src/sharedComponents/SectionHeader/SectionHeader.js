@@ -5,6 +5,6 @@ const SectionHeader = ({ header, className }) => <h2 className={className}>{head
 
 SectionHeader.propTypes = {
 	header: PropTypes.string.isRequired,
-	className: PropTypes.string,
+	className: PropTypes.string
 };
 export default SectionHeader;

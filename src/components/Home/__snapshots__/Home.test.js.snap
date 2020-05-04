@@ -1,35 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders without crashing 1`] = `
-<div>
-  <PageHeader />
-  <div
-    className="movie-listing"
+<Fragment>
+  <Suspense
+    fallback={
+      <div>
+        Loading...
+      </div>
+    }
   >
-    <Connect(Movies)
-      id="populares-en-taquilla"
-      key="1"
-    />
-    <Connect(Movies)
-      id="estrenos-para-toda-la-familia"
-      key="2"
-    />
-    <Connect(Movies)
-      id="estrenos-imprescindibles-en-taquilla"
-      key="3"
-    />
-    <Connect(Movies)
-      id="estrenos-espanoles"
-      key="4"
-    />
-    <Connect(Movies)
-      id="si-te-perdiste"
-      key="5"
-    />
-    <Connect(Movies)
-      id="nuestras-preferidas-de-la-semana"
-      key="6"
-    />
-  </div>
-</div>
+    <PageHeader />
+    <div
+      className="movie-listing"
+    >
+      <lazy
+        id="populares-en-taquilla"
+        key="1"
+      />
+      <lazy
+        id="estrenos-para-toda-la-familia"
+        key="2"
+      />
+      <lazy
+        id="estrenos-imprescindibles-en-taquilla"
+        key="3"
+      />
+      <lazy
+        id="estrenos-espanoles"
+        key="4"
+      />
+      <lazy
+        id="si-te-perdiste"
+        key="5"
+      />
+      <lazy
+        id="nuestras-preferidas-de-la-semana"
+        key="6"
+      />
+    </div>
+  </Suspense>
+</Fragment>
 `;
