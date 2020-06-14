@@ -1,7 +1,8 @@
 import './App.scss';
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense, useEffect } from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { withFocusable, withNavigation } from 'react-tv-navigation';
 
 import configureStore from '../../store';
 
@@ -10,22 +11,26 @@ const MovieTrailer = lazy(() => import('../MovieTrailer/MovieTrailer'));
 const Home = lazy(() => import('../Home/Home'));
 
 const store = configureStore();
+const App = ({ setFocus }) => {
+	useEffect(() => {
+		setFocus('frozen-ii0');
+	}, []);
+	return (
+		<div className='app'>
+			<Provider store={store}>
+				<Router>
+					<Suspense fallback={<div>Loading...</div>}>
+						<Switch>
+							<Route exact path='/' component={Home} />
+							<Route exact path='/movies/:id' component={MovieDetails} />
+							<Route exact path='/streams/movie/:id' component={MovieTrailer} />
+							<Route component={Home} />
+						</Switch>
+					</Suspense>
+				</Router>
+			</Provider>
+		</div>
+	);
+};
 
-const App = () => (
-	<div className='app'>
-		<Provider store={store}>
-			<Router>
-				<Suspense fallback={<div>Loading...</div>}>
-					<Switch>
-						<Route exact path='/' component={Home} />
-						<Route exact path='/movies/:id' component={MovieDetails} />
-						<Route exact path='/streams/movie/:id' component={MovieTrailer} />
-						<Route component={Home} />
-					</Switch>
-				</Suspense>
-			</Router>
-		</Provider>
-	</div>
-);
-
-export default React.memo(App);
+export default React.memo(withNavigation(App));

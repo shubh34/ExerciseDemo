@@ -25,7 +25,7 @@ export const Movies = props => {
 			<SectionHeader header={movieCategoryHeader} />
 			<Slider>
 				{movieList.map(({ artwork, score, id, votes }, index) => (
-					<SliderItem movie={artwork} score={score} id={id} votes={votes} key={index} />
+					<SliderItem movie={artwork} score={score} id={id} votes={votes} key={index} index={index} />
 				))}
 			</Slider>
 		</div>
@@ -49,5 +49,5 @@ export default React.memo(
 	connect(
 		mapState,
 		mapDispatch
-	)(Movies)
+	)((Movies))
 );

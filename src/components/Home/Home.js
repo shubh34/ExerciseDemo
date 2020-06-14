@@ -9,7 +9,7 @@ const Movies = lazy(() => import('../Movies/Movies'));
 const Home = () => {
 	useEffect(() => {
 		document.title = content.documentTitle;
-	});
+	}, [content.documentTitle]);
 	return (
 		<Fragment>
 			<Suspense fallback={<div>Loading...</div>}>

@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { withFocusable } from 'react-tv-navigation';
 import './SliderItem.scss';
 import Scores from '../../Scores/Scores';
 
 const SliderItem = ({
-	movie, id, score, votes
+	movie, id, score, votes, index
 }) => (
 	<div className='slider-item'>
-		<Link name={id} className="slider-item-image" to={`/movies/${id}`}>
+		<Link name={id} className="slider-item-image" to={`/movies/${id}`} focusPath={`${id}${index}`}>
 			<img width="100%" src={movie} alt="" />
 		</Link>
 		<Scores score={score} votes={votes} />
@@ -22,4 +23,4 @@ SliderItem.propTypes = {
 	votes: PropTypes.string.isRequired
 };
 
-export default React.memo(SliderItem);
+export default React.memo(withFocusable(SliderItem));
