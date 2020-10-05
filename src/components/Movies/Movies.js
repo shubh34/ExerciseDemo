@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-
 import { fetchMovieListByCategory } from '../../states/movieListing/action';
 import SectionHeader from '../../sharedComponents/SectionHeader/SectionHeader';
-import Slider from '../../sharedComponents/Slider/Slider';
 import SliderItem from '../../sharedComponents/Slider/SliderItem/SliderItem';
 import { getMovieListHeader, getMovieListByCategory } from '../../states/movieListing/selectors';
+import SliderWithHook from '../../sharedComponents/Slider/SliderWithHook';
 
 const mapDispatch = dispatch => ({
 	fetchMovieList: id => dispatch(fetchMovieListByCategory(id))
@@ -23,11 +22,11 @@ export const Movies = props => {
 	return (
 		<div className='movies'>
 			<SectionHeader header={movieCategoryHeader} />
-			<Slider>
+			<SliderWithHook>
 				{movieList.map(({ artwork, score, id, votes }, index) => (
 					<SliderItem movie={artwork} score={score} id={id} votes={votes} key={index} />
 				))}
-			</Slider>
+			</SliderWithHook>
 		</div>
 	);
 };

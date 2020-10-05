@@ -2,10 +2,9 @@
 .slider {
     display: flex;
     position: relative;
-  
+    padding: 0px 48px;
     &__container {
       display: flex;
-      transition: transform 300ms ease 100ms;
       z-index: 3;
       width: 100%;
     }
